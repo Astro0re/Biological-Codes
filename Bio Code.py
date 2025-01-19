@@ -12,14 +12,9 @@ M=["A","a"]
 F= ["A","a"]
 og = punn(M,F)
 
+
+
 # Future generation code
 def punn_1(var):
-    chan1_= punn(og[0],og[1])
-    chan2_= punn(og[2],og[3])
-    chan3_= punn(og[0],og[2])
-    chan4_= punn(og[1],og[3])
-    chan5_= punn(og[1],og[2])
-    chan6_= punn(og[0],og[3])
     print("Possible Combinations", chan1_,chan2_,chan3_,chan4_,chan5_,chan6_ )
 
-punn_1(og)
