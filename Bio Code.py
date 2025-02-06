@@ -50,3 +50,15 @@ print( punn(M,F))
 def punn_1(var):
     print("Possible Combinations", chan1_,chan2_,chan3_,chan4_,chan5_,chan6_ )
 
+
+# Medical Form For Patients
+def BIO_Form():
+    name = input("Name: ")
+    sex = input("Sex: ")
+    age = input("Age: ")
+    blood_group = input("Blood Group: ")
+    genotype = input("Genotype: ")
+    ill = input("Known Illneses: ")
+    
+
+BIO_Form()
