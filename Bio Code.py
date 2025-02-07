@@ -11,12 +11,20 @@ def punn(var1,var2):
 
 #2nd gen
     for _ in chan1:
+        if len(chan1) >3 :
+            break
 
-    for _ in chan2
+    for _ in chan2:
+        if len(chan2) >3 :
+            break
 
-    for _ in chan3
+    for _ in chan3:
+        if len(chan3) >3 :
+            break
 
-    for _ in chan4
+    for _ in chan4:
+        if len(chan4) >3 :
+            break
 
     gen1_2 = chan1[0],chan2[0]
     gen2_2 = chan1[0], chan2[1]
@@ -45,12 +53,6 @@ F= ["A","a"]
 print( punn(M,F))
 
 
-
-# Future generation code
-def punn_1(var):
-    print("Possible Combinations", chan1_,chan2_,chan3_,chan4_,chan5_,chan6_ )
-
-
 # Medical Form For Patients
 def BIO_Form():
     print("Please input the necessary information...")
@@ -60,6 +62,10 @@ def BIO_Form():
     blood_group = input("Blood Group: ")
     genotype = input("Genotype: ")
     ill = input("Known Illneses: ")
+    comp = input("Complaint?: ")
+    appointment =input("Appointment: ")
+    if appointment == "yes":
+        print("Head Right.")
     print(f"Welcome {name}, Thank you for your information, an employee will attend to you shortly.")
 
 BIO_Form()
