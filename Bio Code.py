@@ -53,12 +53,13 @@ def punn_1(var):
 
 # Medical Form For Patients
 def BIO_Form():
+    print("Please input the necessary information...")
     name = input("Name: ")
     sex = input("Sex: ")
     age = input("Age: ")
     blood_group = input("Blood Group: ")
     genotype = input("Genotype: ")
     ill = input("Known Illneses: ")
-    
+    print(f"Welcome {name}, Thank you for your information, an employee will attend to you shortly.")
 
 BIO_Form()
