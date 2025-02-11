@@ -8,3 +8,5 @@ D_Gen<- function(){
 }
 
 D_Gen()
+
+

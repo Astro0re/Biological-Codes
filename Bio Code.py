@@ -67,5 +67,6 @@ def BIO_Form():
     if appointment == "yes":
         print("Head Right.")
     print(f"Welcome {name}, Thank you for your information, an employee will attend to you shortly.")
+    
 
 BIO_Form()
