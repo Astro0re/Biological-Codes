@@ -65,7 +65,10 @@ def BIO_Form():
     comp = input("Complaint?: ")
     appointment =input("Appointment: ")
     if appointment == "yes":
-        print("Head Right.")
+        print("Please Wait.")
+    else:
+        print("Please Make An Appointment.")
+        print("Your Information will be stored and used when you return during your appointment.")
     print(f"Welcome {name}, Thank you for your information, an employee will attend to you shortly.")
     
 
