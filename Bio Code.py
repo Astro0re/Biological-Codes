@@ -70,3 +70,12 @@ def BIO_Form():
     
 
 BIO_Form()
+
+def DNA(Var):
+    seq=['A','G','T','C']
+    for i in Var:
+        if i == seq:
+            print('True')
+
+b= ['A', 'T']
+DNA(b)
