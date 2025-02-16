@@ -71,11 +71,15 @@ def BIO_Form():
 
 BIO_Form()
 
+Nuc=['A','G','T','C']
+
 def DNA(Var):
     seq=['A','G','T','C']
     for i in Var:
-        if i == seq:
-            print('True')
+        if i not in seq :
+            print('Error')
+        else:
+            return Var
 
 b= ['A', 'T']
 DNA(b)
