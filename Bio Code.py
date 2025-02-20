@@ -74,6 +74,8 @@ def BIO_Form():
 
 BIO_Form()
 
+
+#DNA Sequence in Python
 Nuc=['A','G','T','C']
 
 def DNA(Var):
@@ -86,3 +88,4 @@ def DNA(Var):
 
 b= ['A', 'T']
 DNA(b)
+
