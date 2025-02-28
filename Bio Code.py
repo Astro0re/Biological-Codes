@@ -94,15 +94,21 @@ DNA(b)
 # Duplicate for Organs?
 Shoulder =['Clavicle','Scapula','Acromion']
 Arm =['Humerus','Radius','Ulna']
-Hand=['']
+Phalanges =['Proximal','Middle','Distal']
+Carpals =['Scaphoid','Lunate','Triquetrum','Pisiform','Trapezium','Trapezoid','Capitate','Hamate']
+Hand=['Metacarpals', Phalanges, Carpals]
 leg =['Femur','Patella','Tibia','Fibula']
-Foot =['']  
+Ankle =['Talus','Calcaneus','Navicular','Cuboid','Cuneiforms']
+Foot =[Ankle, 'Metatarsals', Phalanges]  
 Neo_Cranium =['Frontal','Parietal','Temporal','Occipital','Sphenoid','Ethmoid']
-Viscero_Cranium =[ 'Maxilla','Mandible','Zygomatic','Nasal','Lacrimal','Palatine','Inferior Nasal Concha','Vomer']
-Skull =[Neo-Cranium,Viscero-Cranium]
+Viscero_Cranium =[ 'Maxilla','Mandible','Zygomatic','Nasal','Lacrimal','Palatine','Inferior Nasal Concha','Vomer','Turbinate bones']
+Aditory_Ossicles =['Malleus','Incus','Stapes']
+Skull =[Neo_Cranium,Viscero_Cranium,Aditory_Ossicles]
 Neck =['Cranial Vertebrae','Cervical Vertebrae']
-Thoracic =['Sternum','Ribs','Thoracic Vertebrae']
-Pelvise =['Pelvic Girdle','Pelvic Vertebrae']
+Sternum =['Manubrium','Body','Xiphoid Process']
+Ribs =['True Ribs','False Ribs','Floating Ribs']
+Thoracic =[Sternum, Ribs,'Thoracic Vertebrae','Lumbar Vertebrae']
+Pelvise =['Ilium','Ischium','Pubis','Sacrum','Coccyx']
 
 Upper_Limb =[Shoulder,Arm,Hand]
 
@@ -120,10 +126,13 @@ def Identify_Bone(bone):
     Articulation_Count =int.input("How Many Bone's Articulate with this: ")
     input("List the Articulations: ")
     for i in Skeletal_System:
-        if bone in i:
-            return i, "Bone Found"
-        else:
-            return "Bone Not Found"
+        for j in i:
+            for k in j:
+                if bone in j:
+                    return j, "Bone Found"
+                else:
+                    return "Bone Not Found"
+        
         
     for i in Skeletal_System:
         len(i) == Articulation_Count
