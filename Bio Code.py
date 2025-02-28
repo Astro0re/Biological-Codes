@@ -54,6 +54,7 @@ print( punn(M,F))
 
 
 # Medical Form For Patients
+# For more convinent and easy to use management of medical records
 def BIO_Form():
     print("Please input the necessary information...")
     name = input("Name: ")
@@ -89,3 +90,70 @@ def DNA(Var):
 b= ['A', 'T']
 DNA(b)
 
+# Relational Skeletal System Data Base(Connect Serched for bone to every other bone in articulation)
+# Duplicate for Organs?
+Shoulder =['Clavicle','Scapula','Acromion']
+Arm =['Humerus','Radius','Ulna']
+Hand=['']
+leg =['Femur','Patella','Tibia','Fibula']
+Foot =['']  
+Neo_Cranium =['Frontal','Parietal','Temporal','Occipital','Sphenoid','Ethmoid']
+Viscero_Cranium =[ 'Maxilla','Mandible','Zygomatic','Nasal','Lacrimal','Palatine','Inferior Nasal Concha','Vomer']
+Skull =[Neo-Cranium,Viscero-Cranium]
+Neck =['Cranial Vertebrae','Cervical Vertebrae']
+Thoracic =['Sternum','Ribs','Thoracic Vertebrae']
+Pelvise =['Pelvic Girdle','Pelvic Vertebrae']
+
+Upper_Limb =[Shoulder,Arm,Hand]
+
+Lower_Limb =[leg,Foot]
+
+Head_Neck =[Skull,Neck]
+
+Thoracic_Pelvise =[Thoracic,Pelvise]
+
+Skeletal_System =[Upper_Limb,Lower_Limb,Head_Neck,Thoracic_Pelvise]
+
+
+def Identify_Bone(bone):
+    input("Enter Bone: ")
+    Articulation_Count =int.input("How Many Bone's Articulate with this: ")
+    input("List the Articulations: ")
+    for i in Skeletal_System:
+        if bone in i:
+            return i, "Bone Found"
+        else:
+            return "Bone Not Found"
+        
+    for i in Skeletal_System:
+        len(i) == Articulation_Count
+        return i, "Correct"
+    else:
+        return "Incorrect"
+
+#Sequence Alignment, not entirely sure if this is correct
+def SA(seq1,seq2):
+    same=[]
+    for i in seq1:
+        for j in seq2:
+            if i == j:
+                append(same)
+                same_Per = len(same)/(len(seq1)+len(seq2)) * 100 
+                return same_Per
+                print ("The percentage of similarity is", same_Per)
+            else:
+                return "Error"
+
+        if i not in seq2:
+            return "Error"
+        else:
+            return
+
+    if len(seq1) != len(seq2):
+        return "Sequnce not relational"
+    else:
+        for i in seq1:
+            if i not in seq2:
+                return "Error"
+            else:
+                return "Correct"
