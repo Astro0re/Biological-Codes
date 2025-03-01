@@ -128,11 +128,11 @@ def Identify_Bone(bone):
     for i in Skeletal_System:
         for j in i:
             for k in j:
-                if bone in j:
-                    return j, "Bone Found"
+                if bone in i or j or  k:
+                    return "Bone Found"
                 else:
                     return "Bone Not Found"
-        
+## Might have to turn the list into a dictionary to make it easier to search for the bone      
         
     for i in Skeletal_System:
         len(i) == Articulation_Count
