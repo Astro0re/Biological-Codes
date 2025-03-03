@@ -56,6 +56,7 @@ print( punn(M,F))
 # Medical Form For Patients
 # For more convinent and easy to use management of medical records
 def BIO_Form():
+    Sickel_Cell = []
     print("Please input the necessary information...")
     name = input("Name: ")
     sex = input("Sex: ")
@@ -64,6 +65,8 @@ def BIO_Form():
     genotype = input("Genotype: ")
     ill = input("Known Illneses: ")
     comp = input("Complaint?: ")
+    blood_pressure = input("Blood Pressure: ")
+    first_observed = input("First Observation: ")
     appointment =input("Appointment: ")
     if appointment == "yes":
         print("Please Wait.")
@@ -71,6 +74,8 @@ def BIO_Form():
         print("Please Make An Appointment.")
         print("Your Information will be stored and used when you return during your appointment.")
     print(f"Welcome {name}, Thank you for your information, an employee will attend to you shortly.")
+    if genotype == "SS" or "SC":
+        Sickel_Cell.append(name)
     
 
 BIO_Form()
@@ -150,6 +155,12 @@ def SA(seq1,seq2):
                 same_Per = len(same)/(len(seq1)+len(seq2)) * 100 
                 return same_Per
                 print ("The percentage of similarity is", same_Per)
+                if same_Per >= 40:
+                    return "Sequneces are Homologus"
+                    if same_Per >=20 < 40:
+                        return "Sequnces are in the Twilight Zone of Homology"
+                        if same_Per < 20:
+                            return "Sequnces are in the Midnight Zone of Homology"
             else:
                 return "Error"
 
