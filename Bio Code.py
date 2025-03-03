@@ -43,7 +43,7 @@ def punn(var1,var2):
     gen15_2 = chan2[1], chan4[0]
     gen16_2 = chan2[1], chan4[1]
     print("Possible Combinations", chan1, chan2, chan3, chan4)
-    print(f"Proceding Generations {gen1_2},{gen2_2},{gen3_2},{gen4_2},"
+    print(f"Proceeding Generations {gen1_2},{gen2_2},{gen3_2},{gen4_2},"
           f"{gen5_2},{gen6_2},{gen7_2},{gen8_2},{gen9_2},{gen10_2},{gen11_2},"
           f"{gen12_2},{gen13_2},{gen14_2},{gen15_2},{gen16_2}")
 
@@ -54,7 +54,7 @@ print( punn(M,F))
 
 
 # Medical Form For Patients
-# For more convinent and easy to use management of medical records
+# For more convenient and easy to use management of medical records
 def BIO_Form():
     Sickel_Cell = []
     print("Please input the necessary information...")
@@ -63,12 +63,12 @@ def BIO_Form():
     age = input("Age: ")
     blood_group = input("Blood Group: ")
     genotype = input("Genotype: ")
-    ill = input("Known Illneses: ")
+    ill = input("Known Illnesses: ")
     comp = input("Complaint?: ")
     blood_pressure = input("Blood Pressure: ")
     first_observed = input("First Observation: ")
     appointment =input("Appointment: ")
-    if appointment == "yes":
+    if appointment == "Yes" or "yes" or "Y":
         print("Please Wait.")
     else:
         print("Please Make An Appointment.")
@@ -84,18 +84,18 @@ BIO_Form()
 #DNA Sequence in Python
 Nuc=['A','G','T','C']
 
-def DNA(Var):
+def DNA(var):
     seq=['A','G','T','C']
-    for i in Var:
+    for i in var:
         if i not in seq :
             print('Error')
         else:
-            return Var
+            return var
 
 b= ['A', 'T']
 DNA(b)
 
-# Relational Skeletal System Data Base(Connect Serched for bone to every other bone in articulation)
+# Relational Skeletal System Data Base(Connect Searched for bone to every other bone in articulation)
 # Duplicate for Organs?
 Shoulder =['Clavicle','Scapula','Acromion']
 Arm =['Humerus','Radius','Ulna']
@@ -113,7 +113,7 @@ Neck =['Cranial Vertebrae','Cervical Vertebrae']
 Sternum =['Manubrium','Body','Xiphoid Process']
 Ribs =['True Ribs','False Ribs','Floating Ribs']
 Thoracic =[Sternum, Ribs,'Thoracic Vertebrae','Lumbar Vertebrae']
-Pelvise =['Ilium','Ischium','Pubis','Sacrum','Coccyx']
+Pelvis =['Ilium','Ischium','Pubis','Sacrum','Coccyx']
 
 Upper_Limb =[Shoulder,Arm,Hand]
 
@@ -121,14 +121,14 @@ Lower_Limb =[leg,Foot]
 
 Head_Neck =[Skull,Neck]
 
-Thoracic_Pelvise =[Thoracic,Pelvise]
+Thoracic_Pelvis =[Thoracic,Pelvis]
 
-Skeletal_System =[Upper_Limb,Lower_Limb,Head_Neck,Thoracic_Pelvise]
+Skeletal_System =[Upper_Limb,Lower_Limb,Head_Neck,Thoracic_Pelvis]
 
 
-def Identify_Bone(bone):
+def identify_bone(bone):
     input("Enter Bone: ")
-    Articulation_Count =int.input("How Many Bone's Articulate with this: ")
+    articulation_count =int(input("How Many Bone's Articulate with this: "))
     input("List the Articulations: ")
     for i in Skeletal_System:
         for j in i:
@@ -140,40 +140,34 @@ def Identify_Bone(bone):
 ## Might have to turn the list into a dictionary to make it easier to search for the bone      
         
     for i in Skeletal_System:
-        len(i) == Articulation_Count
-        return i, "Correct"
-    else:
-        return "Incorrect"
+        if len(Skeletal_System) == articulation_count:
+            return i, "Correct"
+        else:
+            return "Incorrect"
 
 #Sequence Alignment, not entirely sure if this is correct
-def SA(seq1,seq2):
+def s_a(seq1,seq2):
     same=[]
     for i in seq1:
         for j in seq2:
             if i == j:
                 append(same)
-                same_Per = len(same)/(len(seq1)+len(seq2)) * 100 
-                return same_Per
-                print ("The percentage of similarity is", same_Per)
-                if same_Per >= 40:
-                    return "Sequneces are Homologus"
-                    if same_Per >=20 < 40:
-                        return "Sequnces are in the Twilight Zone of Homology"
-                        if same_Per < 20:
-                            return "Sequnces are in the Midnight Zone of Homology"
+                same_per = len(same)/(len(seq1)+len(seq2)) * 100
+                return same_per
+                print ("The percentage of similarity is", same_per)
+                if same_per >= 40:
+                    return "Sequences are Homologous"
+                    if same_per >=20 < 40:
+                        return "Sequences are in the Twilight Zone of Homology"
+                        if same_per < 20:
+                            return "Sequences are in the Midnight Zone of Homology"
             else:
                 return "Error"
 
-        if i not in seq2:
-            return "Error"
-        else:
-            return
 
+
+def relational(seq1,seq2):
     if len(seq1) != len(seq2):
-        return "Sequnce not relational"
+        return "Sequence not relational"
     else:
-        for i in seq1:
-            if i not in seq2:
-                return "Error"
-            else:
-                return "Correct"
+        return "Sequence is relational"
