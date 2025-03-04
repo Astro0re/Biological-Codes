@@ -151,18 +151,17 @@ def s_a(seq1,seq2):
     for i in seq1:
         for j in seq2:
             if i == j:
-                append(same)
+                same.append(i)
                 same_per = len(same)/(len(seq1)+len(seq2)) * 100
                 return same_per
                 print ("The percentage of similarity is", same_per)
             if same_per >= 40:
                 return "Sequences are Homologous"
-            if same_per >=20 < 40:
+            if  20 <= same_per < 40:
                 return "Sequences are in the Twilight Zone of Homology"
             if same_per < 20:
                 return "Sequences are in the Midnight Zone of Homology"
-            else:
-                return "Error"
+
 
 
 
