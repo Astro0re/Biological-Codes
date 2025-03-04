@@ -2,7 +2,6 @@
 # To predict distribution of parent genotype across a single generation
 from numpy.ma.core import append
 
-
 def punn(var1,var2):
     chan1 = var1[0],var2[0]
     chan2 = var1[0],var2[1]
@@ -145,6 +144,7 @@ def identify_bone(bone):
         else:
             return "Incorrect"
 
+
 #Sequence Alignment, not entirely sure if this is correct
 def s_a(seq1,seq2):
     same=[]
@@ -155,12 +155,12 @@ def s_a(seq1,seq2):
                 same_per = len(same)/(len(seq1)+len(seq2)) * 100
                 return same_per
                 print ("The percentage of similarity is", same_per)
-                if same_per >= 40:
-                    return "Sequences are Homologous"
-                    if same_per >=20 < 40:
-                        return "Sequences are in the Twilight Zone of Homology"
-                        if same_per < 20:
-                            return "Sequences are in the Midnight Zone of Homology"
+            if same_per >= 40:
+                return "Sequences are Homologous"
+            if same_per >=20 < 40:
+                return "Sequences are in the Twilight Zone of Homology"
+            if same_per < 20:
+                return "Sequences are in the Midnight Zone of Homology"
             else:
                 return "Error"
 
