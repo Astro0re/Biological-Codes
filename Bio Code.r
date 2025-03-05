@@ -7,6 +7,3 @@ D_Gen<- function(){
   print(table(seq))
 }
 
-D_Gen()
-
-

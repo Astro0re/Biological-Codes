@@ -106,8 +106,8 @@ Ankle =['Talus','Calcaneus','Navicular','Cuboid','Cuneiforms']
 Foot =[Ankle, 'Metatarsals', Phalanges]  
 Neo_Cranium =['Frontal','Parietal','Temporal','Occipital','Sphenoid','Ethmoid']
 Viscero_Cranium =[ 'Maxilla','Mandible','Zygomatic','Nasal','Lacrimal','Palatine','Inferior Nasal Concha','Vomer','Turbinate bones']
-Aditory_Ossicles =['Malleus','Incus','Stapes']
-Skull =[Neo_Cranium,Viscero_Cranium,Aditory_Ossicles]
+Auditory_Ossicles =['Malleus','Incus','Stapes']
+Skull =[Neo_Cranium,Viscero_Cranium,Auditory_Ossicles]
 Neck =['Cranial Vertebrae','Cervical Vertebrae']
 Sternum =['Manubrium','Body','Xiphoid Process']
 Ribs =['True Ribs','False Ribs','Floating Ribs']
@@ -157,9 +157,9 @@ def s_a(seq1,seq2):
                 print ("The percentage of similarity is", same_per)
             if same_per >= 40:
                 return "Sequences are Homologous"
-            if  20 <= same_per < 40:
+            elif  20 <= same_per < 40:
                 return "Sequences are in the Twilight Zone of Homology"
-            if same_per < 20:
+            elif same_per < 20:
                 return "Sequences are in the Midnight Zone of Homology"
 
 
