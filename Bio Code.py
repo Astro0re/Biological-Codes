@@ -170,3 +170,4 @@ def relational(seq1,seq2):
         return "Sequence not relational"
     else:
         return "Sequence is relational"
+
