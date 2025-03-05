@@ -153,7 +153,7 @@ def s_a(seq1,seq2):
             if i == j:
                 same.append(i)
                 same_per = len(same)/(len(seq1)+len(seq2)) * 100
-                return same_per
+                return "The percentage of similarity is", same_per
                 print ("The percentage of similarity is", same_per)
             if same_per >= 40:
                 return "Sequences are Homologous"
