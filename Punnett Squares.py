@@ -8,22 +8,7 @@ def punn(var1,var2):
     chan3 = var1[1],var2[0]
     chan4 = var1[1],var2[1]
 
-#2nd gen
-    for _ in chan1:
-        if len(chan1) >3 :
-            break
-
-    for _ in chan2:
-        if len(chan2) >3 :
-            break
-
-    for _ in chan3:
-        if len(chan3) >3 :
-            break
-
-    for _ in chan4:
-        if len(chan4) >3 :
-            break
+# Futher Possible genrations
 
     gen1_2 = chan1[0],chan2[0]
     gen2_2 = chan1[0], chan2[1]

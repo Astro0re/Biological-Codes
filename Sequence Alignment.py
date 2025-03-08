@@ -6,20 +6,28 @@ def s_a(seq1,seq2):
             if i == j:
                 same.append(i)
                 same_per = len(same)/(len(seq1)+len(seq2)) * 100
-                return "The percentage of similarity is", same_per
-                print ("The percentage of similarity is", same_per)
+                print( "The percentage of similarity is", same_per)
             if same_per >= 40:
-                return "Sequences are Homologous"
+                print( "Sequences are Homologous")
             elif  20 <= same_per < 40:
-                return "Sequences are in the Twilight Zone of Homology"
+                print( "Sequences are in the Twilight Zone of Homology")
             elif same_per < 20:
-                return "Sequences are in the Midnight Zone of Homology"
+                print( "Sequences are in the Midnight Zone of Homology")
 
 
 
 
 def relational(seq1,seq2):
     if len(seq1) != len(seq2):
-        return "Sequence not relational"
+        print("Sequence not relational")
     else:
-        return "Sequence is relational"
+        print("Sequence is relational") 
+
+x = ['a','d','f','e','p','w','r']
+y = ['a','d','f','e','b','w','r']
+
+s_a(x,y)
+
+relational(x,y)
+
+# Output incorrect review code   
