@@ -1,5 +1,7 @@
 # Relational Skeletal System Data Base(Connect Searched for bone to every other bone in articulation)
 # Duplicate for Organs?
+
+
 def identify_bone():
     bone = input("Enter Bone: ")
     Shoulder =['Clavicle','Scapula','Acromion']
@@ -30,16 +32,19 @@ def identify_bone():
 
     Skeletal_System =[Upper_Limb,Lower_Limb,Head_Neck,Thoracic_Pelvis]
 
-    
+    Found = []
+    Not_Found = []
     #articulation_count =int(input("How Many Bone's Articulate with this: "))
     #input("List the Articulations: ")
     for i in Skeletal_System:
         for j in i:
             for k in j:
                 if bone == i or j or  k:
-                    print( "Bone Found")
+                    Found.append(bone)
                 else:
-                    print("Bone Not Found") 
+                    Not_Found.append(bone)
+
+    print(Found,Not_Found)
 ## Might have to turn the list into a dictionary to make it easier to search for the bone      
         
     #for i in Skeletal_System:
