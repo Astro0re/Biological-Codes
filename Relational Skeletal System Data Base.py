@@ -44,7 +44,7 @@ def identify_bone():
                 else:
                     Not_Found.append(bone)
 
-    print(Found,Not_Found)
+    print(Found or Not_Found)
 ## Might have to turn the list into a dictionary to make it easier to search for the bone      
         
     #for i in Skeletal_System:
