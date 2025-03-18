@@ -43,7 +43,7 @@ def identify_bone():
                 if bone == i or j or k:
                     Found.append(bone)
                     print(f"Found {Found}")
-                else:
+                elif bone != i or j or k:
                     Not_Found.append(bone)
                     print(f"Did not find {Not_Found}")
 

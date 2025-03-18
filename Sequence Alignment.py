@@ -30,5 +30,3 @@ s_a(x,y)
 
 relational(x,y)
 
-# Percentage of similarity should be checked
-# Layout Problem Fixed
