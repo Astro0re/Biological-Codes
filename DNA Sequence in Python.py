@@ -1,6 +1,16 @@
 #DNA Sequence in Python
+import random
+
 Nuc=['A','G','T','C']
 
+# Sequence Generator
+def DNA_Gen(self):
+    Nuc = int(['A', 'G', 'T', 'C'])
+    Ran = random.randint (Nuc, k = 10)
+    print(Ran)
+
+
+# Sequence Verification
 def DNA(var):
     seq=['A','G','T','C']
     for i in var:
@@ -9,6 +19,7 @@ def DNA(var):
         else:
             return var
 
+# Sequence Nucleotide Count
 def Count_DNA(var):
     A_Cou=[]
     G_Cou=[]
@@ -23,7 +34,7 @@ def Count_DNA(var):
             T_Cou.append(i)
         elif i == 'C':
             C_Cou.append(i)
-    print(f' A = {len(A)} , G = {len(G_Cou)}, T = {len(T_Cou)}, C = {len(C_Cou)}')
+    print(f' A = {len(A_Cou)} , G = {len(G_Cou)}, T = {len(T_Cou)}, C = {len(C_Cou)}')
 
 
 b= ['A', 'T']
