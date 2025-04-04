@@ -6,17 +6,17 @@ def BIO_Form():
     A = []
     B = []
     AB = []
-
+    Urgent = []
     print("Please input the necessary information...")
     name = input("Name: ")
     sex = input("Sex: ")
-    age = input("Age: ")
+    age = input(int("Age: "))
     genotype = input("Genotype: ")
     blood_group = input("Blood Group: ")
     ill = input("Known Illnesses: ")
     comp = input("Complaint?: ")
+    blood_pressure = input(int("Blood Pressure: "))
 
-    #blood_pressure = input("Blood Pressure: ")
     #first_observed = input("First Observation: ")
     #appointment =input("Appointment: ")
     #if appointment == "Yes" or "yes" or "Y":
@@ -27,6 +27,9 @@ def BIO_Form():
     print(f"Welcome {name}, Thank you for your information, you will attend to you shortly.")
     if genotype == "SS" or "SC":
         Sickel_Cell.append(name)
+    if blood_pressure > 170:
+        Urgent.append(name)
+        print(f'This Patient requires urgent treatment')
     if comp == "Emergency":
         print('You will be attended to immediately')
 
