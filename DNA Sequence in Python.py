@@ -6,7 +6,7 @@ Nuc=['A','G','T','C']
 # Sequence Generator
 def DNA_Gen(self):
     Nuc = int(['A', 'G', 'T', 'C'])
-    Ran = random.randint (Nuc, k = 10)
+    Ran = random.randint(Nuc,10)
     print(Ran)
 
 
@@ -38,5 +38,10 @@ def Count_DNA(var):
 
 
 b= ['A', 'T']
+a = DNA_Gen()
+
 DNA(b)
 Count_DNA(b)
+
+DNA(a)
+Count_DNA(a)
