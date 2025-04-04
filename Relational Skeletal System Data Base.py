@@ -40,7 +40,7 @@ def identify_bone():
     for i in Skeletal_System:
         for j in i:
             for k in j:
-                if bone == i or j or k:
+                if bone == i or bone == j or bone == k:
                     Found.append(bone)
                     print(f"Found {Found}")
                 elif bone != i or j or k:
