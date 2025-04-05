@@ -4,9 +4,9 @@ import random
 Nuc=['A','G','T','C']
 
 # Sequence Generator
-def DNA_Gen(self):
-    Nuc = int(['A', 'G', 'T', 'C'])
-    Ran = random.randint(Nuc,10)
+def DNA_Gen():
+    Nuc = ['A', 'G', 'T', 'C']
+    Ran = random.randint(int(Nuc),10)
     print(Ran)
 
 
@@ -18,6 +18,9 @@ def DNA(var):
             print('Error')
         else:
             return var
+
+# Edit Verification code to check if
+# the percentage of nucleotides not within regulation is big enough to null the sequence
 
 # Sequence Nucleotide Count
 def Count_DNA(var):
@@ -38,6 +41,7 @@ def Count_DNA(var):
 
 
 b= ['A', 'T']
+
 a = DNA_Gen()
 
 DNA(b)
