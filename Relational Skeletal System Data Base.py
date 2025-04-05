@@ -34,7 +34,6 @@ def identify_bone():
     Skeletal_System = set[Upper_Limb, Lower_Limb, Head_Neck, Thoracic_Pelvis]
 
     Found = []
-    Not_Found = []
     # articulation_count =int(input("How Many Bone's Articulate with this: "))
     # input("List the Articulations: ")
     for i in Skeletal_System:
@@ -43,9 +42,8 @@ def identify_bone():
                 if bone == i or bone == j or bone == k:
                     Found.append(bone)
                     print(f"Found {Found}")
-                elif bone != i or j or k:
-                    Not_Found.append(bone)
-                    print(f"Did not find {Not_Found}")
+                elif bone != i or bone != j or bone != k:
+                    print(f"Wrong Input")
 
 
 ## Might have to turn the list into a dictionary to make it easier to search for the bone
