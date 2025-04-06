@@ -1,5 +1,5 @@
 # Biological Codes 
-Codes to automize certain biological processes 
+Codes to automate certain biological processes results  
 
 ## DNA Sequencing
 To confirm the validity of DNA sequences;
@@ -12,3 +12,7 @@ To predict possible distributions of parent genotype across generations:
 ## Sequence Alignment 
 To perform sequence alignment procedure of two genes to confirm similarity;
 [Code](Sequence%20Alignment.py)
+
+## Relational Skeletal Database 
+Relational Skeletal System Data Base
+Duplicate for Organs?
