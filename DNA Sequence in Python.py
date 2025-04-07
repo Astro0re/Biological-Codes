@@ -6,8 +6,7 @@ Nuc=['A','G','T','C']
 # Sequence Generator
 def DNA_Gen():
     Nuc = ['A', 'G', 'T', 'C']
-    Ran = random.choices(Nuc,10)
-    #for i in range(20):
+    Ran = random.choices(Nuc, k=10)
     print(Ran)
 
 
