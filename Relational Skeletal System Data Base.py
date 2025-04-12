@@ -58,7 +58,7 @@ def identify_bone():
                     Found.append(bone)
                     print(f"Found {Found}")
                 else:
-                    print(f"Not Found")
+                    print(f"Not Found, Wrong Input Entered ")
 
 
 ## Might have to turn the set into a dictionary to make it easier to search for the bone
