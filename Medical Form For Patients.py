@@ -10,16 +10,19 @@ def BIO_Form():
     B = []
     AB = []
     Urgent = []
-    patient_id = random.randint(1-9999, 0)
+    age_1_20 = []
+    age_31_60 = []
+    age_61_up = []
+    patient_id = random.randint(1-9999, 0) + ("_MED")
     print("Please input the necessary information...")
     name = input("Name: ")
     sex = input("Sex: ")
-    age = input(int("Age: "))
+    age = int(input("Age: "))
     genotype = input("Genotype: ")
     blood_group = input("Blood Group: ")
     ill = input("Known Illnesses: ")
     comp = input("Complaint?: ")
-    blood_pressure = input(int("Blood Pressure(Bps): "))
+    blood_pressure = int(input("Blood Pressure(Bps): "))
 
     #first_observed = input("First Observation: ")
     #appointment =input("Appointment: ")
@@ -31,10 +34,16 @@ def BIO_Form():
     print(f"Welcome {name}, Thank you for your information, you will attend to you shortly.")
     print(f"Please note your patient identification number is {patient_id}")
     if genotype == "SS" or "SC":
-        Sickel_Cell.append(name)
+        Sickel_Cell.append(patient_id)
     if int(blood_pressure) > 170 :
-        Urgent.append(name)
+        Urgent.append(patient_id)
         print(f'This Patient requires urgent treatment')
+    if age < 21:
+        age_1_20.append(patient_id)
+    if 20 < age < 61 :
+        age_1_20.append(patient_id)
+    if age > 60 :
+        age_1_20.append(patient_id)
     if comp == "Emergency":
         print('You will be attended to immediately')
 
