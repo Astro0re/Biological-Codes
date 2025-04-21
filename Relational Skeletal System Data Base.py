@@ -63,9 +63,6 @@ def identify_bone():
 
 ## Might have to turn the set into a dictionary to make it easier to search for the bone
 
-
-
-
 identify_bone()
 
 # review code
