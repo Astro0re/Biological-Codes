@@ -1,5 +1,6 @@
 #Sequence Alignment, not entirely sure if this is correct
 def s_a(seq1,seq2):
+    print("Loading Sequences...")
     same=[]
     for i in seq1:
         for j in seq2:
@@ -18,6 +19,7 @@ def s_a(seq1,seq2):
 
 
 def relational(seq1,seq2):
+    print("Comparing Sequences...")
     if len(seq1) == len(seq2):
         print("Sequence is relational")
     elif len(seq1) - len(seq2) >= 20 or -20 :
