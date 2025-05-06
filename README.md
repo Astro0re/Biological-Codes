@@ -1,5 +1,5 @@
 # Biological Codes 
-Codes to automate certain biological processes results  
+Codes to automate certain biological processes with accurate results  
 
 ## DNA Sequencing
 To confirm the validity of DNA sequences;
@@ -14,5 +14,4 @@ To perform sequence alignment procedure of two genes to confirm similarity;
 [Code](Sequence%20Alignment.py)
 
 ## Relational Skeletal Database 
-Relational Skeletal System Data Base
-Duplicate for Organs?
+Relational Skeletal System Data Base system to test students about their knowledge of the systems 
