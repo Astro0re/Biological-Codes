@@ -23,6 +23,9 @@ def BIO_Form():
     ill = input("Known Illnesses: ")
     comp = input("Complaint?: ")
     blood_pressure = int(input("Blood Pressure(Bps): "))
+    height=input("Height(Meters): ")
+    Weight=input("Weight(Kilogram): ")
+    BMI= (Weight/(height*height))*703
 
     #first_observed = input("First Observation: ")
     #appointment =input("Appointment: ")
