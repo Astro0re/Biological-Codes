@@ -5,6 +5,7 @@ Nuc=['A','G','T','C']
 
 # Sequence Generator
 def DNA_Gen():
+    print("Generating Sequence...")
     Nuc = ['A', 'G', 'T', 'C']
     Ran = random.choices(Nuc, k=10)
     print(Ran)
@@ -12,6 +13,7 @@ def DNA_Gen():
 
 # Sequence Verification
 def DNA(var):
+    print("Validating Sequence...")
     seq=['A','G','T','C']
     for i in var:
         if i not in seq :
@@ -24,6 +26,7 @@ def DNA(var):
 
 # Sequence Nucleotide Count
 def Count_DNA(var):
+    print("Sorting Sequence...")
     A_Cou=[]
     G_Cou=[]
     T_Cou=[]
