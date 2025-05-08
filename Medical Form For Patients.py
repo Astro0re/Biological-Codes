@@ -4,6 +4,8 @@ import random
 
 
 def BIO_Form():
+    print("Welcome...")
+    print("Please fill tbis form with accurate infromation...")
     Sickel_Cell = []
     O = []
     A = []
