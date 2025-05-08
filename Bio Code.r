@@ -7,3 +7,6 @@ D_Gen<- function(){
   print(table(seq))
 }
 
+D_Count<- function(Var){
+  count.fields(Var)
+}
