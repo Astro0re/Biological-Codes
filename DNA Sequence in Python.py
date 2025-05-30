@@ -1,3 +1,10 @@
+# Vailidate Sequence 
+def val(seq):
+    SEQ=seq.upper()
+    for i in SEQ:
+        if i != "A" or "C" or "G" or "T":
+            return "Error Validating Sequence"
+        
 #DNA Sequence in Python
 import random
 
