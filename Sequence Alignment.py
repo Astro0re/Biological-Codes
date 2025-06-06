@@ -1,12 +1,12 @@
 #Sequence Alignment, not entirely sure if this is correct
 def s_a(seq1,seq2):
     print("Loading Sequences...")
-    same=[]
-    for i in seq1:
-        for j in seq2:
-            if i == j:
-                same.append(i)
-    same_per = (len(same))/(len(seq1)+len(seq2)) * 100
+    min_len = min(len(seq1), len(seq2))
+    same = 0
+    for i in range(min_len):
+        if seq1[i] == seq2[i]:
+            same += 1
+    same_per = (same / min_len) * 100
     print( "The percentage of similarity is", same_per)
     if same_per >= 40:
         print( "Sequences are Homologous")
