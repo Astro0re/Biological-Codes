@@ -11,7 +11,7 @@ import random
 Nuc=['A','G','T','C']
 
 # Sequence Generator
-def DNA_Gen():
+def DNA_Gen(self):
     print("Generating Sequence...")
     Nuc = ['A', 'G', 'T', 'C']
     Ran = random.choices(Nuc, k=10)
@@ -25,8 +25,7 @@ def DNA(var):
     for i in var:
         if i not in seq :
             print('Error')
-        else:
-            return var
+    print(f"{var} is valid") 
 
 # Edit Verification code to check if
 # the percentage of nucleotides not within regulation is big enough to null the sequence
@@ -52,7 +51,7 @@ def Count_DNA(var):
 
 b= ['A', 'T']
 
-a = DNA_Gen()
+a = ['A','T','T','T','T','G','C']
 
 DNA(b)
 Count_DNA(b)
