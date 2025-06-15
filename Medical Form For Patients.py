@@ -25,6 +25,7 @@ def BIO_Form():
     ill = input("Known Illnesses: ")
     comp = input("Complaint?: ")
     blood_pressure = int(input("Blood Pressure(Bps): "))
+    heart_rate = int(input("Heart Rate: "))
     height=input("Height(Meters): ")
     Weight=input("Weight(Kilogram): ")
     BMI= (Weight/(height*height))*703
@@ -49,6 +50,8 @@ def BIO_Form():
         age_1_20.append(patient_id)
     if age > 60 :
         age_1_20.append(patient_id)
+    if heart_rate > 70:
+        print('Emergency!!')
     if comp == "Emergency":
         print('You will be attended to immediately')
 

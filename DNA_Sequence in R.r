@@ -20,5 +20,8 @@ D_Val <- function(Seq){
     print("Invalid sequence")
   }
 }
-  
-  
+
+# Test Function
+gen_seq <- D_Gen
+
+D_Val(gen_seq)
