@@ -2,7 +2,6 @@
 # For more convenient and easy to use management of medical records
 import random
 
-
 def BIO_Form():
     print("Welcome...")
     print("Please fill tbis form with accurate infromation...")
@@ -25,7 +24,7 @@ def BIO_Form():
     ill = input("Known Illnesses: ")
     comp = input("Complaint?: ")
     blood_pressure = int(input("Blood Pressure(Bps): "))
-    heart_rate = int(input("Heart Rate: "))
+    heart_rate = int(input("Heart Rate(Hr): "))
     height=input("Height(Meters): ")
     Weight=input("Weight(Kilogram): ")
     BMI= (Weight/(height*height))*703
