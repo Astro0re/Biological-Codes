@@ -51,14 +51,12 @@ def identify_bone():
 
     Found = []
     print("Searching Database...")
-    for i in Skeletal_System:
-        for j in i:
-            for k in j:
-                if bone == j or bone == k:
-                    Found.append(bone)
-                    print(f"Found {Found}")
-                else:
-                    print(f"Not Found, Wrong Input Entered ")
+    for i in Skeletal_System :
+        if bone == i :
+            Found.append(bone)
+            print(f"Found {Found}")
+        else:
+            print(f"Not Found, Wrong Input Entered ")
 
 
 ## Might have to turn the set into a dictionary to make it easier to search for the bone

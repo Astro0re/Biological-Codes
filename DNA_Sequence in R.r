@@ -12,16 +12,16 @@ D_Gen <- function(){
 #DNA Sequence Validator
 D_Val <- function(Seq){
   print("Validatig Sequence...")
-  purine <- c("A", "T")
-  pyramidine <- c("G", "C")
-  gene <- c(purine,pyramidine)
+  gene <- c("A", "T", "G", "C")
   for (i in Seq) {
-    if (i != gene)
-    print("Invalid sequence")
+    if (i != gene){
+      print("Invalid sequence")
+    }
   }
 }
 
 # Test Function
-gen_seq <- D_Gen
 
-D_Val(gen_seq)
+Examp <- D_Gen()
+
+D_Val(Examp)
