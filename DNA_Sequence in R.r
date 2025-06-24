@@ -7,6 +7,7 @@ D_Gen <- function(){
   seq <- sample(gene, size = 100, replace = TRUE)
   print("Counting Sequence...")
   print(table(seq))
+  return(seq)
 }
 
 #DNA Sequence Validator
