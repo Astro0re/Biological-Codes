@@ -5,12 +5,11 @@ D_Gen <- function(){
   pyramidine <- c("G","C")
   gene <- c(purine,pyramidine)
   seq <- sample(gene, size = 100, replace = TRUE)
-  print("Counting Sequence...")
-  print(table(seq))
-  return(seq)
+  print(seq)
+  
 }
 
-#DNA Sequence Validator
+#DNA Sequence Validator and counter
 D_Val <- function(Seq){
   print("Validatig Sequence...")
   gene <- c("A", "T", "G", "C")
@@ -19,10 +18,10 @@ D_Val <- function(Seq){
       print("Invalid sequence")
     }
   }
+  print(table(Seq))
 }
 
 # Test Function
+seq_x <- D_Gen()
 
-Examp <- D_Gen()
-
-D_Val(Examp)
+D_Val(seq_x)
