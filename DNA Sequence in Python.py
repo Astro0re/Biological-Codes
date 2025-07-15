@@ -69,20 +69,13 @@ def Start_locate(a):
         else:
             point+1
     
-    for i in a:
-        if a == 'T': 
-            break 
-        else:
-            point+1
-
-    for i in a:
-        if a == 'G': 
-            break 
-        else:
-            point+1
-            
-    start_point = int(a.index(Start_Code_gene))
-    print ( f"Start point of the gene is at the {start_point + 1 } vaule" )
+    #for i in a:
+     #   if a == 'T': 
+      #      break 
+       # else:
+        #    point+1
+    #start_point = int(a.index(Start_Code_gene))
+    print ( f"Start point of the gene is at the {point} vaule" )
 
 tap = ['G','T','A','T','G','A','A']
 
