@@ -60,22 +60,22 @@ DNA(a)
 Count_DNA(a)
 
 # Locate the Start Code in a Sequence
-def Start_locate(a):
+def Start_locate(var):
     Start_Code_gene=('A','T','G')
     point= 1
-    for i in a:
-        if a == ('A','T','G'): 
-            break 
-        else:
-            point+1
-    
     #for i in a:
-     #   if a == 'T': 
+     #   if i == ('A','T','G'): 
       #      break 
        # else:
         #    point+1
-    #start_point = int(a.index(Start_Code_gene))
-    # a.find(Start_Code_gene) | a.find('a') &  a.find('t') &  a.find('g')
+    
+    #for i in var:
+     #   if i == 'A': 
+      #      break 
+       # else:
+        #    point+1
+    
+    start_point = int(var.index(Start_Code_gene))
     print ( f"Start point of the gene is at the {point} vaule" )
 
 tap = ['G','T','A','T','G','A','A']
