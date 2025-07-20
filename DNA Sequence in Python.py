@@ -81,5 +81,3 @@ def Start_locate(var):
 tap = ['G','T','A','T','G','A','A']
 
 Start_locate(tap)
-
-# if a == 'A': break else index +1
