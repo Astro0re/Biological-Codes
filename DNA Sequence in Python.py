@@ -11,7 +11,7 @@ import random
 Nuc=['A','G','T','C']
 
 # Sequence Generator
-def DNA_Gen(self):
+def dna_gen(self):
     print("Generating Sequence...")
     Nuc = ['A', 'G', 'T', 'C']
     Ran = random.choices(Nuc, k=10)
@@ -19,19 +19,20 @@ def DNA_Gen(self):
 
 
 # Sequence Verification
-def DNA(var):
+def dan_ver(var):
     print("Validating Sequence...")
     seq=['A','G','T','C']
     for i in var:
         if i not in seq :
             print('Error')
-    print(f"{var} is valid") 
+        else:
+            print(f"{var} is valid") 
 
 # Edit Verification code to check if
 # the percentage of nucleotides not within regulation is big enough to null the sequence
 
 # Sequence Nucleotide Count
-def Count_DNA(var):
+def count_dna(var):
     print("Sorting Sequence...")
     A_Cou=[]
     G_Cou=[]
@@ -53,14 +54,14 @@ b= ['A', 'T']
 
 a = ['A','T','T','T','T','G','C']
 
-DNA(b)
-Count_DNA(b)
+dna_gen(b)
+count_dna(b)
 
-DNA(a)
-Count_DNA(a)
+dna_gen(a)
+count_dna(a)
 
 # Locate the Start Code in a Sequence
-def Start_locate(var):
+def start_locate(var):
     Start_Code_gene=('A','T','G')
     for i in var:
         if Start_Code_gene in var:
@@ -68,4 +69,4 @@ def Start_locate(var):
 
 loc = ['G','T','A','T','G','A','A']
 
-Start_locate(loc)
+start_locate(loc)
