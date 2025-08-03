@@ -21,15 +21,18 @@ def dna_gen(self):
 # Sequence Verification
 def dan_ver(var):
     print("Validating Sequence...")
-    seq=['A','G','T','C']
+    check = 0
     for i in var:
-        if i not in seq :
-            print('Error')
-        else:
-            print(f"{var} is valid") 
+        if i  == "A" :
+            check = +1
+        elif i == "G" :
+            check = +1
+        elif i == "T" :
+            check = +1
+        elif i == "C" :
+            check = +1
+    print(f"The percentage of nucleotides in the sequence is {check/len(var)*100}%")
 
-# Edit Verification code to check if
-# the percentage of nucleotides not within regulation is big enough to null the sequence
 
 # Sequence Nucleotide Count
 def count_dna(var):
