@@ -31,7 +31,11 @@ def dan_ver(var):
             check = +1
         elif i == "C" :
             check = +1
-    print(f"The percentage of nucleotides in the sequence is {check/len(var)*100}%")
+    per = check/len(var)*100
+    if per > 45:
+        print(f"The percentage of nucleotides in the sequence is {per}%")
+    else:
+        print("Sequence might not be valid")
 
 
 # Sequence Nucleotide Count
