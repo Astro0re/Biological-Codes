@@ -19,23 +19,18 @@ def dna_gen(self):
 
 
 # Sequence Verification
-def dan_ver(var):
+def dna_ver(var):
     print("Validating Sequence...")
     check = 0
     for i in var:
-        if i  == "A" :
-            check = +1
-        elif i == "G" :
-            check = +1
-        elif i == "T" :
-            check = +1
-        elif i == "C" :
-            check = +1
+        if i  == "A" or i == "G" or i == "T" or i == "C":
+            check += 1 
     per = check/len(var)*100
+    print(f"The percentage of nucleotides in the sequence is {per}%")
     if per > 45:
-        print(f"The percentage of nucleotides in the sequence is {per}%")
+        print("Sequence is Valid")
     else:
-        print("Sequence might not be valid")
+        print("Sequence might not be valid, please recheck sequence")
 
 
 # Sequence Nucleotide Count
@@ -66,7 +61,8 @@ count_dna(b)
 
 dna_gen(a)
 count_dna(a)
-
+dna_ver(a)
+                              
 # Locate the Start Code in a Sequence
 def start_locate(var):
     Start_Code_gene=('A','T','G')
