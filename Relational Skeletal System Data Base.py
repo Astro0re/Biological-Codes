@@ -1,43 +1,43 @@
 # Relational Skeletal System Data Base(Connect Searched for bone to every other bone in articulation)
-# Duplicate for Organs?
+# Duplicate for Organs?s
 
 
 def identify_bone():
     bone = input("Enter Bone: ")
 
-    Shoulder = set('Clavicle', 'Scapula', 'Acromion')
+    Shoulder = ('Clavicle', 'Scapula', 'Acromion')
 
-    Arm = set('Humerus', 'Radius', 'Ulna')
+    Arm = ('Humerus', 'Radius', 'Ulna')
 
-    Phalanges = set('Proximal', 'Middle', 'Distal')
+    Phalanges = ('Proximal', 'Middle', 'Distal')
 
-    Carpals = set('Scaphoid', 'Lunate', 'Triquetrum', 'Pisiform', 'Trapezium', 'Trapezoid', 'Capitate', 'Hamate')
+    Carpals = ('Scaphoid', 'Lunate', 'Triquetrum', 'Pisiform', 'Trapezium', 'Trapezoid', 'Capitate', 'Hamate')
 
     Hand = set('Metacarpals', Phalanges, Carpals)
 
-    leg = set('Femur', 'Patella', 'Tibia', 'Fibula')
+    leg = ('Femur', 'Patella', 'Tibia', 'Fibula')
 
-    Ankle = set('Talus', 'Calcaneus', 'Navicular', 'Cuboid', 'Cuneiforms')
+    Ankle = ('Talus', 'Calcaneus', 'Navicular', 'Cuboid', 'Cuneiforms')
 
     Foot = set(Ankle, 'Metatarsals', Phalanges)
 
-    Neo_Cranium = set('Frontal', 'Parietal', 'Temporal', 'Occipital', 'Sphenoid', 'Ethmoid')
+    Neo_Cranium = ('Frontal', 'Parietal', 'Temporal', 'Occipital', 'Sphenoid', 'Ethmoid')
 
-    Viscero_Cranium = set('Maxilla', 'Mandible', 'Zygomatic', 'Nasal', 'Lacrimal', 'Palatine', 'Inferior Nasal Concha', 'Vomer', 'Turbinate bones')
+    Viscero_Cranium = ('Maxilla', 'Mandible', 'Zygomatic', 'Nasal', 'Lacrimal', 'Palatine', 'Inferior Nasal Concha', 'Vomer', 'Turbinate bones')
 
-    Auditory_Ossicles = set('Malleus', 'Incus', 'Stapes')
+    Auditory_Ossicles = ('Malleus', 'Incus', 'Stapes')
 
     Skull = set(Neo_Cranium, Viscero_Cranium, Auditory_Ossicles)
 
-    Neck = set('Cranial Vertebrae', 'Cervical Vertebrae')
+    Neck = ('Cranial Vertebrae', 'Cervical Vertebrae')
 
-    Sternum = set('Manubrium', 'Body', 'Xiphoid Process')
+    Sternum = ('Manubrium', 'Body', 'Xiphoid Process')
 
-    Ribs = set('True Ribs', 'False Ribs', 'Floating Ribs')
+    Ribs = ('True Ribs', 'False Ribs', 'Floating Ribs')
 
-    Thoracic = set(Sternum, Ribs, 'Thoracic Vertebrae', 'Lumbar Vertebrae')
+    Thoracic = (Sternum, Ribs, 'Thoracic Vertebrae', 'Lumbar Vertebrae')
 
-    Pelvis = set('Ilium', 'Ischium', 'Pubis', 'Sacrum', 'Coccyx')
+    Pelvis = ('Ilium', 'Ischium', 'Pubis', 'Sacrum', 'Coccyx')
 
     Upper_Limb = set[(Shoulder, Arm, Hand)]
 
@@ -52,7 +52,7 @@ def identify_bone():
     Found = []
     print("Searching Database...")
     for i in Skeletal_System :
-        if bone == i :
+        if bone in set(i):
             Found.append(bone)
             print(f"Found {Found}")
         else:
