@@ -3,51 +3,52 @@
 
 
 def identify_bone():
-    bone = input("Enter Bone: ")
+    bone = input("Enter Bone: ").strip().title()
+    
+    bones = { "Shoulder" ; ['Clavicle', 'Scapula', 'Acromion'],
 
-    Shoulder = ('Clavicle', 'Scapula', 'Acromion')
+    "Arm" ; ['Humerus', 'Radius', 'Ulna'],
 
-    Arm = ('Humerus', 'Radius', 'Ulna')
+    "Phalanges" : ['Proximal', 'Middle', 'Distal'] ,
 
-    Phalanges = ('Proximal', 'Middle', 'Distal')
+    "Carpals" : ['Scaphoid', 'Lunate', 'Triquetrum', 'Pisiform', 'Trapezium', 'Trapezoid', 'Capitate', 'Hamate'],
 
-    Carpals = ('Scaphoid', 'Lunate', 'Triquetrum', 'Pisiform', 'Trapezium', 'Trapezoid', 'Capitate', 'Hamate')
+    "Hand" : ['Metacarpals', Phalanges, Carpals],
 
-    Hand = set('Metacarpals', Phalanges, Carpals)
+    "leg" : ['Femur', 'Patella', 'Tibia', 'Fibula'],
 
-    leg = ('Femur', 'Patella', 'Tibia', 'Fibula')
+    "Ankle" : ['Talus', 'Calcaneus', 'Navicular', 'Cuboid', 'Cuneiforms'],
 
-    Ankle = ('Talus', 'Calcaneus', 'Navicular', 'Cuboid', 'Cuneiforms')
+    "Foot" : [Ankle, 'Metatarsals', Phalanges],
 
-    Foot = set(Ankle, 'Metatarsals', Phalanges)
+    "Neo_Cranium" : ['Frontal', 'Parietal', 'Temporal', 'Occipital', 'Sphenoid', 'Ethmoid'],
 
-    Neo_Cranium = ('Frontal', 'Parietal', 'Temporal', 'Occipital', 'Sphenoid', 'Ethmoid')
+    "Viscero_Cranium" : ['Maxilla', 'Mandible', 'Zygomatic', 'Nasal', 'Lacrimal', 'Palatine', 'Inferior Nasal Concha', 'Vomer', 'Turbinate bones'],
 
-    Viscero_Cranium = ('Maxilla', 'Mandible', 'Zygomatic', 'Nasal', 'Lacrimal', 'Palatine', 'Inferior Nasal Concha', 'Vomer', 'Turbinate bones')
+    "Auditory_Ossicles" : ['Malleus', 'Incus', 'Stapes'],
 
-    Auditory_Ossicles = ('Malleus', 'Incus', 'Stapes')
+    "Skull" : [Neo_Cranium, Viscero_Cranium, Auditory_Ossicles],
 
-    Skull = set(Neo_Cranium, Viscero_Cranium, Auditory_Ossicles)
+    "Neck" : ['Cranial Vertebrae', 'Cervical Vertebrae'],
 
-    Neck = ('Cranial Vertebrae', 'Cervical Vertebrae')
+    "Sternum" : ['Manubrium', 'Body', 'Xiphoid Process'],
 
-    Sternum = ('Manubrium', 'Body', 'Xiphoid Process')
+    "Ribs" : ['True Ribs', 'False Ribs', 'Floating Ribs'],
 
-    Ribs = ('True Ribs', 'False Ribs', 'Floating Ribs')
+    "Thoracic" : [Sternum, Ribs, 'Thoracic Vertebrae', 'Lumbar Vertebrae'],
 
-    Thoracic = (Sternum, Ribs, 'Thoracic Vertebrae', 'Lumbar Vertebrae')
+    "Pelvis" : ['Ilium', 'Ischium', 'Pubis', 'Sacrum', 'Coccyx'],
 
-    Pelvis = ('Ilium', 'Ischium', 'Pubis', 'Sacrum', 'Coccyx')
+    "Upper_Limb" : [Shoulder, Arm, Hand],
 
-    Upper_Limb = set[(Shoulder, Arm, Hand)]
+    "Lower_Limb" : [leg, Foot],
 
-    Lower_Limb = set[leg, Foot]
+    "Head_Neck" : [Skull, Neck],
 
-    Head_Neck = set[Skull, Neck]
+    "Thoracic_Pelvis" : [Thoracic, Pelvis],
 
-    Thoracic_Pelvis = set[Thoracic, Pelvis]
-
-    Skeletal_System = set[Upper_Limb, Lower_Limb, Head_Neck, Thoracic_Pelvis]
+    "Skeletal_System" : [Upper_Limb, Lower_Limb, Head_Neck, Thoracic_Pelvis]
+    }
 
     Found = []
     print("Searching Database...")
@@ -59,7 +60,7 @@ def identify_bone():
             print(f"Not Found, Wrong Input Entered ")
 
 
-## Might have to turn the set into a dictionary to make it easier to search for the bone
+
 
 identify_bone()
 
