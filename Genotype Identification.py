@@ -2,4 +2,9 @@
 
 import pandas as pd
 import numbers as nu 
-import skimage as ski
+import tensorflow as tf
+import kueras 
+
+# Genotype identification using sequence identification 
+
+# Import datasets
