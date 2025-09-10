@@ -7,4 +7,6 @@ import kueras
 
 # Genotype identification using sequence identification 
 
-# Import datasets
+# Import dataset 
+# Source Hugging Face [Docty](https://huggingface.co/Docty)
+df = pd.read_parquet("hf://datasets/Docty/Blood-Cells/data/train-00000-of-00001.parquet") 
