@@ -10,3 +10,7 @@ import kueras
 # Import dataset 
 # Source Hugging Face [Docty](https://huggingface.co/Docty)
 df = pd.read_parquet("hf://datasets/Docty/Blood-Cells/data/train-00000-of-00001.parquet") 
+
+# Filter out only Erythrocytes (Red Blood cells)
+
+#  Cerate new classes of Erythrocytes using bit count as a basis (those below a certain bit count are considered unhealthy)
