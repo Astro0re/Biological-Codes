@@ -14,3 +14,9 @@ class __main__:
 # Source Hugging Face [Docty](https://huggingface.co/Docty)
 global df
 df = pd.read_parquet("hf://datasets/Docty/Blood-Cells/data/train-00000-of-00001.parquet") 
+
+# Filter out only Erythrocytes (Red Blood cells)
+global Eryth 
+Eryth =[]
+
+#  Cerate new classes of Erythrocytes using bit count as a basis (those below a certain bit count are considered unhealthy)
