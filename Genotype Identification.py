@@ -3,7 +3,11 @@
 import pandas as pd
 import numpy as nu 
 import tensorflow as tf
-import kueras 
+import keras
+from keras import layers, models, optimizers
+from keras.utils import load_img, img_to_array, save_img
+from keras.preprocessing.image import ImageDataGenerator
+
 
 # Genotype identification using sequence identification 
 
