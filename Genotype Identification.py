@@ -34,12 +34,14 @@ print(df.head())
 global Eryth 
 Eryth = df[df['label'] == 5]
 
+# Split data
+x_train, x_test, y_train, y_test = train_test_split(Eryth['image'], Eryth['label'], test_size=0.2, random_state=42)
 # Transform the image data into a numpy array
-
+encode = Erthy['image']
 # Train Model on the Erythrocytes
-
+model = sequentail.neural.network()
 # Using a simple CNN model for image classification
-
+model.fit()
 
 # bit classification of Erythrocytes
 global bit_count
@@ -47,11 +49,11 @@ bit_count = []
 
 #  Cerate new classes of Erythrocytes using bit count as a basis (those below a certain bit count are considered unhealthy)
 def sorting():
-    if bit_count < __ :
+    if bit_count < [] :
         df['label'] = 'Grade A'
-    elif bit_count < __ :
+    elif bit_count < [] :
         df['label'] = 'Grade B'
-    elif bit_count < __ :
+    elif bit_count < [] :
         df['label'] = 'Grade C'
     else:
         df['label']  = 'Grade Unkown'
