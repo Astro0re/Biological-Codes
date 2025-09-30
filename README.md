@@ -16,3 +16,6 @@ To perform sequence alignment on two genes/proteins to confirm Homogeneity;
 ## Relational Skeletal Database 
 Relational Skeletal System Data Base system to test students about their knowledge of the skeletal system, the articulations and so on;
 [Code]()
+
+## Genotype Identification
+AI classification model for Red blood cells, to be used for anaomaly scan to identify diseases affecting the oxygen carrying cell that is erythrocytes. [Code](Genotype%20Identification.py)
