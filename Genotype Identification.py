@@ -38,8 +38,11 @@ Eryth = df[df['label'] == 5]
 x_train, x_test, y_train, y_test = train_test_split(Eryth['image'], Eryth['label'], test_size=0.2, random_state=42)
 # Transform the image data into a numpy array
 encode = Erthy['image']
-# Train Model on the Erythrocytes
-model = sequentail.neural.network()
+# Train Model on the Erythrocytes (Sequential Processing)
+model = tf.keras.Sequential([
+    tf.keras.layers.Flatten(input_shape(28,28)),
+    tf.keras.layers.Dense()
+])
 # Using a simple CNN model for image classification
 model.fit()
 
