@@ -7,6 +7,8 @@ import keras
 from keras import layers, models, optimizers
 from keras.utils import load_img, img_to_array, save_img
 from keras.preprocessing.image import ImageDataGenerator
+from sklearn.model_selection import train_test_split
+from pil import image
 
 
 # Genotype identification using sequence identification 
@@ -37,7 +39,10 @@ Eryth = df[df['label'] == 5]
 # Split data
 x_train, x_test, y_train, y_test = train_test_split(Eryth['image'], Eryth['label'], test_size=0.2, random_state=42)
 # Transform the image data into a numpy array
-encode = Erthy['image']
+encode = Eryth['image']
+
+image.open(encode)
+
 # Train Model on the Erythrocytes (Sequential Processing)
 model = tf.keras.Sequential([
     tf.keras.layers.Flatten(input_shape(28,28)),
