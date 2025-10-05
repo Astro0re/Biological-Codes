@@ -49,7 +49,7 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense()
 ])
 # Using a simple CNN model for image classification
-model.fit()
+model.fit(Eryth)
 
 # bit classification of Erythrocytes
 global bit_count
