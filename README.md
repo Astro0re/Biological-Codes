@@ -3,10 +3,10 @@ Codes to automate certain biological processes with accurate results
 
 ## DNA Sequencing
 To confirm the validity of strings of DNA sequences, as well as counting of the sequence compoents;
-[Code](DNA%20Sequence%20in%20Python.py)
+[Code](DNA_Sequence.py) or [Code](DNA_Sequence.r)
 
 ## Punnet Squares 
-To display all possible combinations of parent genotype across resulting generations:
+To display all possible combinations of parent genotype across resulting generations;
 [Code](Punnett%20Squares.py)
 
 ## Sequence Alignment 
@@ -18,4 +18,7 @@ Relational Skeletal System Data Base system to test students about their knowled
 [Code]()
 
 ## Genotype Identification
-AI classification model for Red blood cells, to be used for anaomaly scan to identify diseases affecting the oxygen carrying cell that is erythrocytes. [Code](Genotype%20Identification.py)
+AI classification model for Red blood cells, to be used for anaomaly scan to identify diseases affecting the oxygen carrying cell that is erythrocytes; [Code](Genotype%20Identification.py)
+
+## Phylogenetic Tree Distance Claculator
+Code to determine the evolutionary distance between a set of DNA sequences using a set of formuls; [Code](Phylogenetic%20tree.py)
