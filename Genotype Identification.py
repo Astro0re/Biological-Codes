@@ -1,14 +1,17 @@
 # Genotype identification software using computer vision
 
+import os
 import pandas as pd
 import numpy as nu 
 import tensorflow as tf
 import keras
 from keras import layers, models, optimizers
 from keras.utils import load_img, img_to_array, save_img
+from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
 from keras.preprocessing.image import ImageDataGenerator
 from sklearn.model_selection import train_test_split
-from pil import image
+from PIL import image
+import cv2
 
 
 # Genotype identification using sequence identification 
