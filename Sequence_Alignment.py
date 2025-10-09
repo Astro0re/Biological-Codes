@@ -15,7 +15,15 @@ def s_a(seq1,seq2):
     elif same_per < 20:
         print( "Sequences are in the Midnight Zone of Homology")
 
-
+def diff_s_a(seq1,seq2):
+    print("Comparing Sequences...")
+    diff1=[]
+    diff2=[]
+    min_len = min(len(seq1), len(seq2))
+    for i in range(min_len):
+        if seq1[i] != seq2[i]:
+            diff1.append(seq1[i])
+            diff2.append(seq2[i])
 
 
 def relational(seq1,seq2):
