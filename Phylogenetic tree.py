@@ -3,7 +3,7 @@ from DNA_Sequence import dna_ver , count_dna
 from Sequence_Alignment import s_a , diff_s_a , relational
 import pandas as pd
 
-global seq_1,seq_2
+global seq_1,seq_2,diff
 seq_1 = input('First Sequence: ')
 seq_2 = input('Second Sequence: ')
 
