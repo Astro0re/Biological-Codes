@@ -2,6 +2,7 @@
 from DNA_Sequence import dna_ver , count_dna
 from Sequence_Alignment import s_a , diff_s_a , relational
 import pandas as pd
+from math import log
 
 global seq_1,seq_2,diff
 seq_1 = input('First Sequence: ')
@@ -21,5 +22,10 @@ def phylo_tree():
     n = diff
     L = min(len(ver_seq_1),len(ver_seq_2))
     p = n/L
-    from math import log
-    pass
+    distance = -(3/4) * log(1-(4/3)*p)
+    print(f'Distance between two sequences is: {distance}')
+
+s1= ['A','C','G','T','A','C','G','T']
+s2= ['G','C','T','T','A','C','T','T']
+
+phylo_tree(s1,s2)
