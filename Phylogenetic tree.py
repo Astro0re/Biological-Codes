@@ -4,17 +4,17 @@ from Sequence_Alignment import s_a , diff_s_a , relational
 import pandas as pd
 from math import log
 
-global seq_1,seq_2,diff
-seq_1 = input('First Sequence: ')
-seq_2 = input('Second Sequence: ')
-
-ver_seq_1 = dna_ver(seq_1)
-ver_seq_2 = dna_ver(seq_2)
-
-s_a(ver_seq_1,ver_seq_2)
-diff_s_a(ver_seq_1,ver_seq_2)
 
 def phylo_tree():
+    global seq_1,seq_2,diff
+    seq_1 = input('First Sequence: ')
+    seq_2 = input('Second Sequence: ')
+
+    ver_seq_1 = dna_ver(seq_1)
+    ver_seq_2 = dna_ver(seq_2)
+
+    s_a(ver_seq_1,ver_seq_2)
+    diff_s_a(ver_seq_1,ver_seq_2)
     # n = number of differences between two sequences
     # L = length of the sequences
     # p = n/L
