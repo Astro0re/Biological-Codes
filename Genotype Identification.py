@@ -42,10 +42,13 @@ Eryth = df[df['label'] == 5]
 # Split data
 x_train, x_test, y_train, y_test = train_test_split(Eryth['image'], Eryth['label'], test_size=0.2, random_state=42)
 # Transform the image data into a numpy array
+Eryth.map(lambda x, y: (x/255, y))
+
 encode = Eryth.as_numpy_iterator()
 encode.head()
 
-image.open(encode)
+batch = encode.next()
+
 
 # Train Model on the Erythrocytes (Sequential Processing)
 model = tf.keras.Sequential()
