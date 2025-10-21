@@ -39,10 +39,4 @@ def relational(seq1,seq2):
     elif len(seq1) - len(seq2) >= 20 or -20 :
         print("Sequence is not relational")
 
-x = ['a','d','f','e','p','w','r']
-y = ['a','d','f','e','b','w','r']
-
-s_a(x,y)
-
-relational(x,y)
 

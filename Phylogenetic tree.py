@@ -7,9 +7,8 @@ from math import log
 
 def phylo_tree():
     global seq_1,seq_2,diff
-    seq_1 = input('First Sequence: ')
-    seq_2 = input('Second Sequence: ')
-
+    seq_1 = str(input('First Sequence: '))
+    seq_2 = str(input('Second Sequence: '))
     ver_seq_1 = dna_ver(seq_1)
     ver_seq_2 = dna_ver(seq_2)
 
@@ -28,4 +27,4 @@ def phylo_tree():
 s1= ['A','C','G','T','A','C','G','T']
 s2= ['G','C','T','T','A','C','T','T']
 
-phylo_tree(s1,s2)
+phylo_tree()

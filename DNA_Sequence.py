@@ -7,11 +7,8 @@ def val(seq):
         
 #DNA Sequence in Python
 import random
-
-Nuc=['A','G','T','C']
-
 # Sequence Generator
-def dna_gen(self):
+def dna_gen():
     print("Generating Sequence...")
     Nuc = ['A', 'G', 'T', 'C']
     Ran = random.choices(Nuc, k=10)
@@ -50,19 +47,7 @@ def count_dna(var):
         elif i == 'C':
             C_Cou.append(i)
     print(f' A = {len(A_Cou)} , G = {len(G_Cou)}, T = {len(T_Cou)}, C = {len(C_Cou)}')
-
-
-b= ['A', 'T']
-
-a = ['A','T','T','T','T','G','C']
-
-dna_gen(b)
-count_dna(b)
-
-dna_gen(a)
-count_dna(a)
-dna_ver(a)
-                              
+              
 # Locate the Start Code in a Sequence
 def start_locate(var):
     Start_Code_gene=('A','T','G')
@@ -70,6 +55,3 @@ def start_locate(var):
         if Start_Code_gene in var:
             print(f"Start point of the gene is at the {var.index(Start_Code_gene)} vaule")
 
-loc = ['G','T','A','T','G','A','A']
-
-start_locate(loc)
