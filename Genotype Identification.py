@@ -39,18 +39,25 @@ print(df.head())
 global Eryth 
 Eryth = df[df['label'] == 5]
 
+df_img = Eryth['image']
+df_label = Eryth['label']
+
+# Change to a numpy array
+df_img.as_numpy_iterator().next()
+
 # Split data
-x_train, x_test, y_train, y_test = train_test_split(Eryth['image'], Eryth['label'], test_size=0.2, random_state=42)
+train_size = int( df_img * .7)
+val_size = int(df_img * .2)
+test_size = int(df_img * .1)
+
 # Transform the image data into a numpy array
-Eryth.map(lambda x, y: (x/255, y))
+df_img.map(lambda x, y: (x/255, y))
 
-encode = Eryth.as_numpy_iterator()
-encode.head()
-
-batch = encode.next()
+x = df_img
+y = df_label
 
 
-# Train Model on the Erythrocytes (Sequential Processing)
+# Train Model on the Erythrocytes Sequential and Regressio?
 model = tf.keras.Sequential()
 
 model.add(Conv2D(16, (3,3), activation='relu', input_shape=(256,256,3)))
