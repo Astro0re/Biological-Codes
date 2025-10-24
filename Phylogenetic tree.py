@@ -9,17 +9,20 @@ def phylo_tree():
     global seq_1,seq_2,diff
     seq_1 = str(input('First Sequence: '))
     seq_2 = str(input('Second Sequence: '))
-    ver_seq_1 = dna_ver(seq_1)
-    ver_seq_2 = dna_ver(seq_2)
+    dna_ver(seq_1)
+    dna_ver(seq_2)
+    if dna_ver(seq_1) and dna_ver(seq_2) != "Sequence is Valid":
+        print("Please recheck sequences")
+        breakpoint
 
-    s_a(ver_seq_1,ver_seq_2)
-    diff_s_a(ver_seq_1,ver_seq_2)
+    s_a(seq_1,seq_2)
+    diff_s_a(seq_1,seq_2)
     # n = number of differences between two sequences
     # L = length of the sequences
     # p = n/L
     # formula = -(3/4) * ln(1-(4/3)*p)
     n = diff
-    L = min(len(ver_seq_1),len(ver_seq_2))
+    L = min(len(seq_1),len(seq_2))
     p = n/L
     distance = -(3/4) * log(1-(4/3)*p)
     print(f'Distance between two sequences is: {distance}')
