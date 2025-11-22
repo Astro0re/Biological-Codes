@@ -7,11 +7,8 @@ import tensorflow as tf
 import keras
 from keras import layers, models, optimizers
 from keras.utils import load_img, img_to_array, save_img
-from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
-from keras.preprocessing.image import ImageDataGenerator
-from sklearn.model_selection import train_test_split
+from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
 from PIL import image
-import cv2
 
 
 # Genotype identification using sequence identification 
@@ -42,6 +39,7 @@ Eryth = df[df['label'] == 5]
 df_img = Eryth['image']
 df_label = Eryth['label']
 
+
 # Change to a numpy array
 df_img.as_numpy_iterator().next()
 
@@ -57,16 +55,21 @@ x = df_img
 y = df_label
 
 
-# Train Model on the Erythrocytes Sequential and Regressio?
+# Train Model on the Erythrocytes Sequential and Regression?
 model = tf.keras.Sequential()
 
-model.add(Conv2D(16, (3,3), activation='relu', input_shape=(256,256,3)))
+model.add(Conv2D(125, (3,3), activation='relu', input_shape=(256,256,3), padding='same'))
+model.add(Conv2D(125, activation='relu' ,padding='same'))
 model.add(MaxPooling2D())
 
-model.add(Conv2D(32, (3,3), activation='relu'))
+model.add(Conv2D(225, activation='relu' ,padding='same'))
+model.add(Conv2D(225, activation='relu' ,padding='same'))
+model.add(Conv2D(225, activation='relu' ,padding='same'))
 model.add(MaxPooling2D())
 
-model.add(Conv2D(16, (3,3), activation='relu'))
+model.add(Conv2D(300, (3,3), activation='relu', padding='same'))
+model.add(Conv2D(300, activation='relu' ,padding='same'))
+model.add(Conv2D(300, activation='relu' ,padding='same'))
 model.add(MaxPooling2D())
 
 model.add(Flatten())
