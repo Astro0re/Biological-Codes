@@ -19,10 +19,11 @@ def dna_gen():
 def dna_ver(var):
     print("Validating Sequence...")
     check = 0
+    nuc = ['A', 'G', 'T', 'C']
     for i in var:
-        if i  == "A" or i == "G" or i == "T" or i == "C":
+        if i  in nuc:
             check += 1 
-    per = check/len(var)*100
+    per = (check)/len(var) *100
     print(f"The percentage of nucleotides in the sequence is {per}%")
     if per > 45:
         print("Sequence is Valid")

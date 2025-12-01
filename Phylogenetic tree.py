@@ -16,7 +16,7 @@ def phylo_tree():
         breakpoint
 
     s_a(seq_1,seq_2)
-    diff_s_a(seq_1,seq_2)
+    diff=diff_s_a(seq_1,seq_2)
     # n = number of differences between two sequences
     # L = length of the sequences
     # p = n/L
@@ -31,3 +31,4 @@ s1= ['A','C','G','T','A','C','G','T']
 s2= ['G','C','T','T','A','C','T','T']
 
 phylo_tree()
+# Output: Distance between two sequences is: 0.5108256237659907
