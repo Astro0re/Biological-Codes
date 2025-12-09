@@ -3,6 +3,7 @@
 
 
 def identify_bone():
+    global bone
     bone = input("Enter Bone: ").strip().title()
     
     bones = {
@@ -30,26 +31,33 @@ def identify_bone():
         "Skeletal_System": ['Upper_Limb', 'Lower_Limb', 'Head_Neck', 'Thoracic_Pelvis']
     }
 
-    def flatten_bones(key, bones_dict, seen=None):
-        if seen is None:
-            seen = set()
-        items = []
-        for item in bones_dict.get(key, []):
-            if item in bones_dict and item not in seen:
-                seen.add(item)
-                items.extend(flatten_bones(item, bones_dict, seen))
-            else:
-                items.append(item)
-        return items
+    def identy():
+        for i in bones.keys():
+            for i in bones.values():
+                if bone == i:
+                    print('Bone found')
+                    print(bones.keys().values(bone))
 
-    print("Searching Database...")
-    found = False
-    all_bones = set(flatten_bones('Skeletal_System', bones))
-    if bone in all_bones:
-        print(f"Found: {bone}")
-        found = True
-    if not found:
-        print("Not Found, Wrong Input Entered")
+    #def flatten_bones(key, bones_dict, seen=None):
+    #    if seen is None:
+    #        seen = set()
+    #    items = []
+    #    for item in bones_dict.get(key, []):
+    #        if item in bones_dict and item not in seen:
+    #            seen.add(item)
+    #            items.extend(flatten_bones(item, bones_dict, seen))
+    #        else:
+    #            items.append(item)
+    #    return items
+
+    #print("Searching Database...")
+    #found = False
+    #all_bones = set(flatten_bones('Skeletal_System', bones))
+    #if bone in all_bones:
+    #    print(f"Found: {bone}")
+    #    found = True
+    #if not found:
+    #    print("Not Found, Wrong Input Entered")
 
 identify_bone()
 
