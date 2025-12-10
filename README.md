@@ -18,7 +18,7 @@ Relational Skeletal System Data Base system to test students about their knowled
 [Code]()
 
 ## Genotype Identification
-AI classification model for Red blood cells, to be used for anaomaly scan to identify diseases affecting the oxygen carrying cell that is erythrocytes; [Code](Genotype%20Identification.py)
+AI classification model for Red blood cells, to be used for anaomaly scan to identify diseases affecting the oxygen carrying cell that is erythrocytes; [Code](Genotype%20Identification.py) [Code_2](Genotype_Identifier.ipynb)
 
 ## Phylogenetic Tree Distance Claculator
 Code to determine the evolutionary distance between a set of DNA sequences using a set of formuls; [Code](Phylogenetic%20tree.py)
