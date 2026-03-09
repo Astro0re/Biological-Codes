@@ -1,8 +1,10 @@
 # Search cellular pathways, through system/function search or gene search
 
+# Code to take in input from sensors(Temprature, Visual(Camera with crazy magnification)/input cell sequence and runs through a pipeline of structure prediction tools, )
+def readings():
+    pass
 
 # Conditional requirments that point to the type of cellular reaction taking place
-
 def temprature():
     temp= int(input("At what temprature is this reaction occuring(C): "))
     if temp > 45:
@@ -27,3 +29,11 @@ def temprature():
 
 def cell_fate():
     Histone = input()
+
+
+# Desired cellular reactions/Those acounted for based of values: Appoptosis, Necrosis, Diffrentiation
+
+# Conditional requirements:
+# Appoptosis:
+# Necrosis:
+# Diffrentiation: 
