@@ -27,7 +27,9 @@ def temprature():
 #| Epigenetic | Histone H3 content                    | ~30% lower than differentiated   | 2-10x higher mRNA/protein                     | Western blot, mass spec     |
 #| Epigenetic | H3K4me2/H3K27me3 marks                | Balanced for pluripotency        | H3K4me2 up, H3K27me3 shifts in differentiated | sc-CUT&RUN, ChIP-seq        |
 
+# Take readings from sensors 
 def cell_fate():
+<<<<<<< HEAD
     Histone = input()
 
 
@@ -37,3 +39,9 @@ def cell_fate():
 # Appoptosis:
 # Necrosis:
 # Diffrentiation: 
+=======
+    # Histone requires western blot for readings, import image and run through function (Machince Language) to quantify 
+    Histone = input('Histone h3 content = ')
+    mR= input('Messanger RNA Sequence = s')
+    Gly = input('Glycolisis Uptake = ')
+>>>>>>> 920c2b5051efc3cba4292a7c8c17139ad7e16b50

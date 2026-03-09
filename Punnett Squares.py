@@ -48,3 +48,4 @@ print( punn_simple(M,F))
 print( punn_multi(M,F))
 
 
+# Make more efficient(try cascaing arays)
