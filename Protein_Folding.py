@@ -1,0 +1,1 @@
+# Code to stimulate all possible folds a protein can achive given cretain parameters
