@@ -1,8 +1,10 @@
 # Search cellular pathways, through system/function search or gene search
 
+# Code to take in input from sensors(Temprature, Visual(Camera with crazy magnification)/input cell sequence and runs through a pipeline of structure prediction tools, )
+def readings():
+    pass
 
 # Conditional requirments that point to the type of cellular reaction taking place
-
 def temprature():
     temp= int(input("At what temprature is this reaction occuring(C): "))
     if temp > 45:
@@ -25,5 +27,21 @@ def temprature():
 #| Epigenetic | Histone H3 content                    | ~30% lower than differentiated   | 2-10x higher mRNA/protein                     | Western blot, mass spec     |
 #| Epigenetic | H3K4me2/H3K27me3 marks                | Balanced for pluripotency        | H3K4me2 up, H3K27me3 shifts in differentiated | sc-CUT&RUN, ChIP-seq        |
 
+# Take readings from sensors 
 def cell_fate():
+<<<<<<< HEAD
     Histone = input()
+
+
+# Desired cellular reactions/Those acounted for based of values: Appoptosis, Necrosis, Diffrentiation
+
+# Conditional requirements:
+# Appoptosis:
+# Necrosis:
+# Diffrentiation: 
+=======
+    # Histone requires western blot for readings, import image and run through function (Machince Language) to quantify 
+    Histone = input('Histone h3 content = ')
+    mR= input('Messanger RNA Sequence = s')
+    Gly = input('Glycolisis Uptake = ')
+>>>>>>> 920c2b5051efc3cba4292a7c8c17139ad7e16b50
