@@ -56,3 +56,32 @@ def start_locate(var):
         if Start_Code_gene in var:
             print(f"Start point of the gene is at the {var.index(Start_Code_gene)} vaule")
 
+# AT Content
+def AT():
+    con= input('DNA Seq: ').upper
+    a = ()
+    t = ()
+    at_seq = ()
+    con.count('A').append(a + 1)
+    con.count('T').append(t + 1)
+    at = ((a+t)/len(con)) * 100
+    print(f'AT content in this sequence is {at}')
+    for i in con:
+        if i == 'A' | 'T':
+            i.append(at_seq)
+            print(f'AT sequence: {at_seq}')
+
+# GC Content
+def GC():
+    con= input('DNA Seq: ').upper
+    g = ()
+    c = ()
+    gc_seq = ()
+    con.count('G').append(g + 1)
+    con.count('C').append(c + 1)
+    gc = ((g+c)/len(con)) * 100
+    print(f'AT content in this sequence is {gc}')
+    for i in con:
+        if i == 'G' | 'C':
+            i.append(gc_seq)
+            print(f'AT sequence: {gc_seq}')
