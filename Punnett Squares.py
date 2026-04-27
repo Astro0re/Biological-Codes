@@ -1,6 +1,6 @@
 # Punnett Squares Code
 # To predict distribution of parent genotype across a single generation
-from numpy.ma.core import append
+# from numpy.ma.core import append
 
 def punn_simple(var1,var2):
     print("Matching Genes...")
