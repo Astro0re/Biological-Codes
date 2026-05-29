@@ -39,6 +39,8 @@ class __main__:
     df_img = Eryth['image']
     df_label = Eryth['label']
 
+    # Re-label and/or add new data to identify sickel cells.
+
 
     # Change to a numpy array
     df_img.as_numpy_iterator().next()
@@ -55,28 +57,38 @@ class __main__:
     y = df_label
 
 
-    # Train Model on the Erythrocytes Sequential and Regression?
+    # Train Model on the Erythrocytes using the VG16 computer vision model. 
     model = tf.keras.Sequential()
+    model.add(Conv2D(64, (3,3), activation='relu', input_shape=(224,224,3), padding = "same"))
+    model.add(Conv2D(64, (3,3), activation='relu', padding = "same"))
+    model.add(MaxPooling2D(2,2))
 
-    model.add(Conv2D(125, (3,3), activation='relu', input_shape=(256,256,3), padding='same'))
-    model.add(Conv2D(125, activation='relu' ,padding='same'))
-    model.add(MaxPooling2D())
+    model.add(Conv2D(128, (3,3), activation='relu', padding = "same"))
+    model.add(Conv2D(128, (3,3), activation='relu', padding = "same"))
+    model.add(MaxPooling2D(2,2))
 
-    model.add(Conv2D(225, activation='relu' ,padding='same'))
-    model.add(Conv2D(225, activation='relu' ,padding='same'))
-    model.add(Conv2D(225, activation='relu' ,padding='same'))
-    model.add(MaxPooling2D())
+    model.add(Conv2D(256, (3,3), activation='relu', padding = "same"))
+    model.add(Conv2D(256, (3,3), activation='relu', padding = "same"))
+    model.add(Conv2D(256, (3,3), activation='relu', padding = "same"))
+    model.add(MaxPooling2D(2,2))
 
-    model.add(Conv2D(300, (3,3), activation='relu', padding='same'))
-    model.add(Conv2D(300, activation='relu' ,padding='same'))
-    model.add(Conv2D(300, activation='relu' ,padding='same'))
-    model.add(MaxPooling2D())
+    model.add(Conv2D(512, (3,3), activation='relu', padding = "same"))
+    model.add(Conv2D(512, (3,3), activation='relu', padding = "same"))
+    model.add(Conv2D(512, (3,3), activation='relu', padding = "same"))
+    model.add(MaxPooling2D(2,2))
+
+    model.add(Conv2D(512, (3,3), activation='relu', padding = "same"))
+    model.add(Conv2D(512, (3,3), activation='relu', padding = "same"))
+    model.add(Conv2D(512, (3,3), activation='relu', padding = "same"))
+    model.add(MaxPooling2D(2,2))
+
 
     model.add(Flatten())
-    model.add(Dense(256, activation='relu'))
-    model.add(Dense(1, activation='sigmoid'))
+    model.add(Dense(4096, activation='relu'))
+    model.add(Dense(4096, activation='relu'))
+    model.add(Dense(1000, activation='softmax', name='Output'))
 
-    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy', 'loss'])
 
     model.summary()
     # Using a simple CNN model for image classification
