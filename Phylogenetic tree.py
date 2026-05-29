@@ -13,14 +13,10 @@ def phylo_tree():
     dna_ver(seq_2)
     if dna_ver(seq_1) and dna_ver(seq_2) != "Sequence is Valid":
         print("Please recheck sequences")
-        breakpoint
 
     s_a(seq_1,seq_2)
     diff=diff_s_a(seq_1,seq_2)
-    # n = number of differences between two sequences
-    # L = length of the sequences
-    # p = n/L
-    # formula = -(3/4) * ln(1-(4/3)*p)
+   
     n = diff
     L = min(len(seq_1),len(seq_2))
     p = n/L
