@@ -29,19 +29,18 @@ def temprature():
 
 # Take readings from sensors 
 def cell_fate():
-<<<<<<< HEAD
+
     Histone = input()
 
 
-# Desired cellular reactions/Those acounted for based of values: Appoptosis, Necrosis, Diffrentiation
+    # Desired cellular reactions/Those acounted for based of values: Appoptosis, Necrosis, Diffrentiation
 
-# Conditional requirements:
-# Appoptosis:
-# Necrosis:
-# Diffrentiation: 
-=======
+    # Conditional requirements:
+    # Appoptosis:
+    # Necrosis:
+    # Diffrentiation: 
     # Histone requires western blot for readings, import image and run through function (Machince Language) to quantify 
     Histone = input('Histone h3 content = ')
     mR= input('Messanger RNA Sequence = s')
     Gly = input('Glycolisis Uptake = ')
->>>>>>> 920c2b5051efc3cba4292a7c8c17139ad7e16b50
+

@@ -8,7 +8,7 @@ import keras
 from keras import layers, models, optimizers
 from keras.utils import load_img, img_to_array, save_img
 from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
-from PIL import image
+from PIL import Image
 
 
 # Genotype identification using sequence identification 
@@ -43,10 +43,10 @@ class __main__:
 
 
     # Change to a numpy array
-    df_img.as_numpy_iterator().next()
+    df_img = df_img.as_numpy_iterator().next()
 
     # Split data
-    train_size = int( df_img * .7)
+    train_size = int(df_img * .7)
     val_size = int(df_img * .2)
     test_size = int(df_img * .1)
 
@@ -99,7 +99,7 @@ class __main__:
     bit_count = []
 
     #  Cerate new classes of Erythrocytes using bit count as a basis (those below a certain bit count are considered unhealthy)
-    def sorting():
+    def sorting(self):
         if bit_count < [] :
             df['label'] = 'Grade A'
         elif bit_count < [] :
@@ -108,5 +108,6 @@ class __main__:
             df['label'] = 'Grade C'
         else:
             df['label']  = 'Grade Unkown'
+        
 
-__main__
+__main__()
