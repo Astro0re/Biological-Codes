@@ -1,3 +1,5 @@
+import numpy 
+
 # Vailidate Sequence 
 def val(seq):
     SEQ=seq.upper()
@@ -67,9 +69,11 @@ def AT():
     at = ((a+t)/len(con)) * 100
     print(f'AT content in this sequence is {at}')
     for i in con:
-        if i == 'A' | 'T':
-            i.append(at_seq)
-            print(f'AT sequence: {at_seq}')
+        if i == 'A' :
+            i.append(at_seq + 1)
+        elif i ==  'T':
+            i.append(at_seq + 1)
+    print(f'AT sequence: {at_seq}')
 
 # GC Content
 def GC():
@@ -82,6 +86,8 @@ def GC():
     gc = ((g+c)/len(con)) * 100
     print(f'AT content in this sequence is {gc}')
     for i in con:
-        if i == 'G' | 'C':
-            i.append(gc_seq)
-            print(f'AT sequence: {gc_seq}')
+        if i == 'G' :
+            i.append(gc_seq + 1)
+        elif i ==  'C':
+            i.append(gc_seq + 1)    
+    print(f'AT sequence: {gc_seq}')
