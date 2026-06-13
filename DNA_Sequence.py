@@ -60,30 +60,30 @@ def start_locate(var):
 
 # AT Content
 def AT():
-    con= input('DNA Seq: ').upper
+    con= input('DNA Seq: ')
     a = con.count('A')
     t = con.count('T')
-    at_seq = ()
+    at_seq = []
     at = ((a+t)/len(con)) * 100
     print(f'AT content in this sequence is {at}')
     for i in con:
         if i == 'A' :
-            i.append(at_seq + 1)
+            at_seq.append(i) 
         elif i ==  'T':
-            i.append(at_seq + 1)
+            at_seq.append(i)
     print(f'AT sequence: {at_seq}')
 
 # GC Content
 def GC():
-    con= input('DNA Seq: ').upper
+    con= input('DNA Seq: ')
     g = con.count('G')
     c = con.count('C')
-    gc_seq = ()
+    gc_seq = []
     gc = ((g+c)/len(con)) * 100
-    print(f'AT content in this sequence is {gc}')
+    print(f'GC content in this sequence is {gc}')
     for i in con:
         if i == 'G' :
-            i.append(gc_seq + 1)
+            gc_seq.append(i)
         elif i ==  'C':
-            i.append(gc_seq + 1)    
-    print(f'AT sequence: {gc_seq}')
+            gc_seq.append(i)   
+    print(f'GC sequence: {gc_seq}')
