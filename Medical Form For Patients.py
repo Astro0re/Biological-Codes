@@ -14,7 +14,7 @@ def BIO_Form():
     age_1_20 = []
     age_31_60 = []
     age_61_up = []
-    patient_id = random.randint(1-9999, 0) + ("_MED")
+    patient_id = random.randint(1-9999, 0) #+ ("_MED")
     print("Please input the necessary information...")
     name = input("Name: ")
     sex = input("Sex: ")
@@ -25,8 +25,8 @@ def BIO_Form():
     comp = input("Complaint?: ")
     blood_pressure = int(input("Blood Pressure(Bps): "))
     heart_rate = int(input("Heart Rate(Hr): "))
-    height=input("Height(Meters): ")
-    Weight=input("Weight(Kilogram): ")
+    height=int(input("Height(Meters): "))
+    Weight=int(input("Weight(Kilogram): "))
     BMI= (Weight/(height*height))*703
 
     #first_observed = input("First Observation: ")
