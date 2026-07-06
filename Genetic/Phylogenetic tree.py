@@ -1,6 +1,6 @@
 # Phylogenetic tree distance calculation function for DNA sequences.
-from DNA_Sequence import dna_ver , count_dna
-from Sequence_Alignment import s_a , diff_s_a , relational
+from Genetic.DNA_Sequence import dna_ver , count_dna
+from Genetic.Sequence_Alignment import s_a , diff_s_a , relational
 import pandas as pd
 from math import log
 
