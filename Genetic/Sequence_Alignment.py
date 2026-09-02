@@ -29,7 +29,8 @@ def diff_s_a(seq1,seq2):
     for i in range(len(diff1)):
         if diff1[i] != diff2[i]:
             diff += 1
-    print(diff) 
+    print (diff)
+    return diff 
     
 
 # Code to test relationality 

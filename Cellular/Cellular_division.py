@@ -16,10 +16,12 @@ def cell_div():
 
     for i in range(expected_div):
         out_cell[f'cell{i}'] = 0
+
+    
     
     for i in range(time): 
-        out_cell[f'cell{k}'] += 1
-        if out_cell[f'cell{k}'] >= 20: 
+        out_cell[f'cell{i}'] += 1
+        if out_cell[f'cell{i}'] >= 20: 
             break
     if (time - 20)  > 0: 
         for i in range(time - 20): 
@@ -33,3 +35,18 @@ def cell_div():
 
 
 cell_div()
+
+
+# Simple execution
+time = int(input('Time(seconds):'))
+if time != int:
+    print('Wrong input, enter a number')
+
+divison = round(time / 20)
+
+for i in range(divison):
+    print(f'Cell{i} grown')
+
+import seaborn as sns
+
+sns.scatterplot(x = time , y = divison)
