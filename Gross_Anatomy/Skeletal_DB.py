@@ -33,10 +33,9 @@ def identify_bone():
 
     def identy():
         for i in bones.keys():
-            for i in bones.values():
-                if bone == i:
-                    print('Bone found')
-                    print(f"{bones.keys()} {bones.values()}")
+            if bones.values() == bone :
+                print('Bone found')
+                print(f"{bones.keys()} {bones.values()}")
 
     #def flatten_bones(key, bones_dict, seen=None):
     #    if seen is None:
