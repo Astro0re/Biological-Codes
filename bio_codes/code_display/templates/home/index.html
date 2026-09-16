@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>homepage</title>
+        <link href="{% static 'home/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <h1>Biological codes</h1>
+            <p>Welcome to my bioligical playground where I write code to simulate biological processes</p>
+        </div>
+        <div>
+            <!--double curly braces to get variable listed in views.py and utilize it in rendered html-->
+            <p>{{ code }}</p>
+             
+            
+        </div>
+    </body>
+</html>
