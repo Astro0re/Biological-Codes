@@ -28,3 +28,15 @@ Relational Skeletal System Data Base system to test students about their knowled
 [Code](Gross_Anatomy/Skeletal_DB.py)
 
 ## Cellular
+
+
+# If statment in django html
+{% if %}
+<p> </p>
+{% else %}
+<p></p>
+{% endif %}
+
+# Start django project/app
+pyhton manage.py runserver
+migrate to code_display/
