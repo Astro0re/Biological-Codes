@@ -21,6 +21,8 @@ def ore(request):
 # General Display for site 
 
 # Cellular Functions 
+def functions(request):
+    return 
 
 # Generic Functions 
 

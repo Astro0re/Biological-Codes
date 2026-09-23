@@ -5,17 +5,37 @@
     <head>
         <title>homepage</title>
         <link href="{% static 'home/styles.css' %}" rel="stylesheet">
+        <script href="{% static ''%}"></script>
     </head>
     <body>
-        <div>
+        <nav>
+            <ul>
+                <li><a href="#codes">Codes</a></li>
+            </ul>
+        </nav>
+        <section>
             <h1>Biological codes</h1>
             <p>Welcome to my bioligical playground where I write code to simulate biological processes</p>
-        </div>
-        <div>
+            <div>
             <!--double curly braces to get variable listed in views.py and utilize it in rendered html-->
             <p>{{ code }}</p>
-             
-            
         </div>
+        </section>
+        <section id="codes">
+            <div>
+                <h1> Codes</h1>
+                <p>Here are biological codes made to simulate biological processes, relay information and display outcomes. Grouped by biolgical activity level</p>
+            </div>
+            <div>
+                <button id="gen" onclick="gen()">Genetic</button>
+                <button id="cell" onclick="cell()">Cellular</button>
+                <button id="gross" onclick="gross()">Gross Anatomy</button>
+            </div>
+            <div id="info_dis">
+
+            </div>
+        </section>
+        <script src="../home/dis_fun/index.js"></script>
     </body>
+    
 </html>
