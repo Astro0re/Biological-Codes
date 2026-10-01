@@ -21,9 +21,13 @@ def ore(request):
 # General Display for site 
 
 # Cellular Functions 
-def functions(request):
-    return 
+def cell(request):
+    return render(request, "cell/index.html")
 
-# Generic Functions 
+# Genetic Functions 
+def genetic(request):
+    return render(request, "genetic/index.html")
 
 # Gross Anatomy Functions
+def gross(request):
+    return render(request, "gross/index.html")

@@ -15,7 +15,7 @@ const display = {
 
 
 
-let info_dis =document.querySelector('#info_dis')
+const info_dis =document.querySelector('#info_dis')
 gen.nodeValue();
 
 function gen() {
