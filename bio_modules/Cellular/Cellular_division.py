@@ -8,15 +8,16 @@ cell starts at base value, cell division/growth occur, when threshold is reached
 
 
 # Simple execution
-time = int(input('Time(seconds):'))
-if time != int:
-    print('Wrong input, enter a number')
+def simp_cell():
+    time = int(input('Time(seconds):'))
+    if time != int:
+        print('Wrong input, enter a number')
 
-divison = round(time / 20)
+    divison = round(time / 20)
 
-for i in range(divison):
-    print(f'Cell{i} grown')
+    total_cell = 0 
+    for i in range(divison):
+        total_cell += 1
+        print(f'Cell{i} grown')
+    return total_cell
 
-import seaborn as sns
-
-sns.scatterplot(x = time , y = divison)
