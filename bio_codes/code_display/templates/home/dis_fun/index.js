@@ -18,8 +18,10 @@ const display = {
 const info_dis =document.querySelector('#info_dis')
 gen.nodeValue();
 
+// Click to add section info
 function gen() {
-        info_dis.textContent = 
+        info_dis.appendChild(add)
+        add  = 
         <>
             <h3>{display.gen.info}</h3>
             <p>{display.gen.proj}</p>
@@ -27,15 +29,17 @@ function gen() {
     };
     
 function cell(){
-    info_dis.textContent = 
+    add = 
         <>
             <h3>{display.cell.info}</h3>
             <p>{display.cell.proj}</p>
         </>
+    info_dis.appendChild(add)
     } ;
     
 function gross(){
-        info_dis.textContent = 
+        info_dis.appendChild(add)
+        add  = 
         <>
             <h3>{display.gross.info}</h3>
             <p>{display.gross.proj}</p>

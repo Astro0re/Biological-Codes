@@ -1,4 +1,227 @@
+/* FOUNDATION: Sets the shared color palette, sizing, and typography for every page. */
+:root {
+    color-scheme: light;
+    --color-ink: #19332c;
+    --color-muted: #5d7069;
+    --color-paper: #f4f7f2;
+    --color-surface: #ffffff;
+    --color-green: #287456;
+    --color-green-dark: #1d5b43;
+    --color-border: #dce6de;
+    --shadow-soft: 0 12px 32px rgb(25 51 44 / 8%);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+/* PAGE CANVAS: Controls the overall background, readable line length, and page spacing. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: min(100% - 2rem, 1100px);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 1rem 0 2rem;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    line-height: 1.65;
+}
+
+/* HEADINGS AND COPY: Gives titles clear hierarchy and keeps paragraph text comfortable to read. */
+h1,
+h2,
+h3 {
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+}
+
 h1 {
-    font-weight: bold;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+    margin: 0 0 1rem;
+    color: var(--color-muted);
+}
+
+/* NAVIGATION: Styles the top navigation bar and its home or section links. */
+nav {
+    display: flex;
+    align-items: center;
+    min-height: 3.5rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.9rem;
+    box-shadow: var(--shadow-soft);
+}
+
+nav ul {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    color: var(--color-green-dark);
+    font-weight: 650;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+/* LINKS: Sets a consistent green link treatment and a visible keyboard focus state. */
+a {
+    color: var(--color-green-dark);
+    font-weight: 650;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+a:hover {
+    color: var(--color-green);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #8cc9a7;
+    outline-offset: 3px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    border-radius: 0.55rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #edf5ef;
+}
+
+/* CONTENT SECTIONS: Turns page sections into calm cards with consistent spacing. */
+section {
+    margin: 0 0 1.25rem;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1.15rem;
+    box-shadow: var(--shadow-soft);
+}
+
+section > div + div {
+    margin-top: 1.25rem;
+}
+
+/* ACTIONS: Styles buttons and grouped page links as clear, touch-friendly actions. */
+button {
+    min-height: 2.75rem;
+    margin: 0.25rem 0.4rem 0.25rem 0;
+    padding: 0.65rem 1rem;
+    color: #fff;
+    font: inherit;
+    font-weight: 650;
+    background: var(--color-green);
+    border: 1px solid var(--color-green);
+    border-radius: 0.65rem;
+    cursor: pointer;
+    transition: background-color 150ms ease, transform 150ms ease;
+}
+
+button:hover {
+    background: var(--color-green-dark);
+    transform: translateY(-1px);
+}
+
+#codes a {
+    display: inline-block;
+    margin: 0.2rem 0.65rem 0.2rem 0;
+}
+
+/* DYNAMIC CONTENT: Gives the home page's info_dis output area a defined display surface. */
+#info_dis {
+    min-height: 2rem;
+    padding: 0.75rem 1rem;
+    color: var(--color-ink);
+    background: #f4f8f4;
+    border: 1px solid var(--color-border);
+    border-radius: 0.7rem;
+}
+
+/* FOOTER: Separates the attribution from page content and keeps it visually quiet. */
+footer {
+    padding: 1.25rem 0.5rem 0;
     text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* SMALL SCREENS: Tightens spacing and stacks navigation controls on narrow devices. */
+@media (max-width: 600px) {
+    body {
+        width: min(100% - 1rem, 1100px);
+        padding-top: 0.5rem;
+    }
+
+    nav {
+        margin-bottom: 1rem;
+    }
+
+    section {
+        border-radius: 0.85rem;
+    }
+
+    #codes a,
+    #codes button {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* REDUCED MOTION: Honors the visitor's system setting by removing smooth movement effects. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 
+Code display container for codes
+*/
+.display_code_cont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.display_code_cont div {
+    margin: 0 0 1.25rem;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1.15rem;
+    
 }

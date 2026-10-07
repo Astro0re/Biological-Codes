@@ -3,17 +3,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Gross Functions</title>
         <link href="{% static 'home/styles.css' %}" rel="stylesheet">
-        <script href="{% static ''%}"></script>
     </head>
     <body>
         <nav>
             <ul>
-                <li><a href="#codes">Codes</a></li>
+                <li><a href="{% url 'index'%}">Home</a></li>
             </ul>
         </nav>
         
+        <section>
+            <h1>Gross Anatomy Code</h1>
+            <p></p>
+        </section>
+
+        <section class="display_code_cont">
+            <div>
+                <p>Skeletal Database</p>
+            </div>
+        </section>
 
         <footer>
             <p>Built and designed by Oreofeoluwa Fesobi.<br></br>

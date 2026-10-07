@@ -3,19 +3,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>homepage</title>
         <link href="{% static 'home/styles.css' %}" rel="stylesheet">
-        <script href="{% static ''%}"></script>
     </head>
     <body>
         <nav>
             <ul>
                 <li><a href="#codes">Codes</a></li>
+                <li><a href="#contribute">Contributions</a></li>
             </ul>
         </nav>
         <section>
             <h1>Biological codes</h1>
-            <p>Welcome to my biolosgical playground where I write code to simulate biological processes</p>
+            <p>Welcome to my biological playground where I write code to simulate biological processes</p>
             <div>
             <!--double curly braces to get variable listed in views.py and utilize it in rendered html-->
             <p>{{ code }}</p>
@@ -26,16 +27,31 @@
         </section>
         <section id="codes">
             <div>
-                <h1> Codes</h1>
-                <p>Here are biological codes made to simulate biological processes, relay information and display outcomes. Grouped by biolgical activity level</p>
+                <h1>Sections</h1>
+                <p>The body carries out various processes and works with various systems constantly. </p>
+                <p>
+                Here are some of those functions recreated with code.
+                Grouped by biolgical activity level</p>
             </div>
             <div>
-                <button id="gen" onclick="gen()">Genetic</button>
-                <button id="cell" onclick="cell()">Cellular</button>
-                <button id="gross" onclick="gross()">Gross Anatomy</button>
+                <a href="{% url 'cell' %}">Cellular Code</a>
+                <a href="{% url 'genetic' %}">Genetic Code</a>
+                <a href="{% url 'gross' %}">Gross Anatomy Code</a>
             </div>
-            <div id="info_dis">
+            
+            
+        </section>
 
+        <section id="contribute">
+            <div>
+                <h1>Contributions</h1>
+                <p>Our body is a complex, beautiful structure that we are still trying to understand.</p>
+                <p>Pherhaps thorugh this method of reverse engineering we can create new discoveries.
+                Would love to colaborate on this project with as much people as possible</p>
+                
+                <div>
+                    <h2>Goals</h2>
+                </div>
             </div>
         </section>
         <script src="../home/dis_fun/index.js"></script>
