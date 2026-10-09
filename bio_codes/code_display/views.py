@@ -49,3 +49,23 @@ def genetic(request):
 # Gross Anatomy Functions
 def gross(request):
     return render(request, "gross/index.html")
+
+
+def test_py_html(request):
+    """Show a small, fixed Python calculation driven by a web form input."""
+    context = {"seconds": "", "cycles": None, "error": None}
+
+    if request.method == "POST":
+        raw_seconds = request.POST.get("seconds", "").strip()
+        try:
+            seconds = int(raw_seconds)
+            if not 0 <= seconds <= 3600:
+                raise ValueError
+
+            context["seconds"] = seconds
+            context["cycles"] = seconds // 20
+        except ValueError:
+            context["seconds"] = raw_seconds
+            context["error"] = "Enter a whole number from 0 to 3600."
+
+    return render(request, "TEST_PY_HTML/index.html", context)

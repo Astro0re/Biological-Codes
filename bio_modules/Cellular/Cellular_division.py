@@ -21,3 +21,6 @@ def simp_cell():
         print(f'Cell{i} grown')
     return total_cell
 
+import seaborn as sns
+
+#sns.scatterplot(x = time , y = divison)
